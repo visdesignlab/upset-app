@@ -1,0 +1,29 @@
+
+<div class="paper-list-block">
+	<a href="{{ site.baseurl }}{{ project.url }}"><img alt="{{ project.agency }} logo"
+                                                           class="project-image-small"
+                                                           src="{{ site.baseurl }}/assets/images/grants/{{ project.logo }}"></a>
+    <p class="pubs">
+
+        <span class="paper-title"><a href="{{ site.baseurl }}{{ project.url }}">{{ project.title }}</a></span><br/>
+        <span><b>PI:</b> {% include person_name_link.html key=project.pi %}</span>
+
+        {% if project.copi %}
+         <br>
+            <span><b>Co-PI(s):</b> </span>
+            {% for investigator in project.copi %}
+                {% include person_name_link.html key=investigator %}{% if forloop.last %}{% else %},{% endif %}
+           {% endfor %}
+        {% endif %}
+
+        {% if project.coinvestigators %}
+            <br>
+            <span><b>Co-Investigators:</b> </span>
+            {% for investigator in project.coinvestigators %}
+                {% include person_name_link.html key=investigator %}{% if forloop.last %}{% else %},{% endif %}
+           {% endfor %}
+        {% endif %}
+        <br>
+        <span><b>Duration:</b> {{project.time}}</span>
+       </p>
+</div>

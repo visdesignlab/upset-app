@@ -1,0 +1,47 @@
+<div class="banner">
+    <div class="home-image">        
+        <div id="main-banner-image">
+            <a class="banner-image" href="">
+                <img alt="Publication teaser image." class="left-banner-image"/>
+                <span id="left-banner-image-title" class="banner-image-title"></span>
+            </a>
+        </div>
+
+        <div id="top-right-banner-image">
+            <a class="banner-image" href="">
+                <span id="top-right-banner-image-title" class="banner-image-title"></span>
+                <img alt="Publication teaser image." class="top-right-banner-image">
+            </a>
+        </div>
+
+        <div id="bottom-right-banner-image">
+            <a class="banner-image" href="">
+                <img alt="Publication teaser image." class="bottom-right-banner-image">
+                <span id="bottom-right-banner-image-title" class="banner-image-title"></span>
+            </a>
+        </div>
+
+        <script>
+            publications.sort(function () {
+                return .5 - Math.random();
+            });
+
+            var i = 0;
+            ["#main-banner-image", "#top-right-banner-image", "#bottom-right-banner-image"].forEach(function (id) {
+
+                var pub = publications[i];
+                i++;
+                var bannerImg = document.querySelector(id + " img");
+                bannerImg.alt = pub.shortname + " teaser image";
+                bannerImg.src = "{{ site.baseurl }}/assets/images/publications/" + pub.image_large;
+
+                var bannerLink = document.querySelector(id + "  a");
+                bannerLink.href = pub.url;
+                
+                var bannerText = document.querySelector(id + " span");
+                bannerText.innerText = pub.title;
+            });
+
+        </script>
+    </div>
+</div>

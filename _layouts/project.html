@@ -1,0 +1,196 @@
+---
+layout: default
+---
+
+<!-- LAYOUT FOR A GRANT -->
+
+<div class="funding">
+
+    <header class="funding-title">
+        <h1>{{ page.title | remove: "| Vis Design Lab" }}</h1>
+    </header>
+
+    <article class="publication-content-main">
+
+        <h2>Abstract</h2>
+        {{ page }}
+
+        {% if page.publications %}
+
+            {% assign pubs = page.publications %}
+            <h2>Publications</h2>
+
+            {% for publication_key in pubs reversed  %}
+                {% for publication in site.publications %}
+                    {% if publication.key == publication_key %}
+                        {% include publication_list_entry.html %}
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        {% endif %}
+
+
+
+        {% if page.staff %}
+        <h2>VDL Project Staff</h2>
+        <div style="overflow: auto;">
+            {% for person_key in page.staff  %}
+                {% for person in site.persons %}
+                    {% if person.key == person_key %}
+                        {% include person_list_entry.html key=person_key %}
+                    {% endif %}
+                {% endfor %}
+            {% endfor %}
+        </div>
+        {% endif %}
+
+        {% if page.alumni %}
+        <br>
+        <h2>VDL Project Alumni</h2>
+        <div style="overflow: auto;">
+        <ul>
+            {% for person_key in page.alumni  %}
+            {% assign known = false %}
+                {% for person in site.persons %}
+                    {% if person.key == person_key %}
+                         <li>{{person.first_name}} {{person.last_name}}</li>
+                        {% assign known = true %}
+                    {% endif %}
+
+                {% endfor %}
+                {% if known == false %}
+                     <li>{{person_key}}</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+        </div>
+        {% endif %}
+
+          {% if page.otherstaff %}
+        <br>
+        <h2>Other Staff</h2>
+        <div style="overflow: auto;">
+        <ul>
+            {% for person_key in page.otherstaff  %}
+            {% assign known = false %}
+                {% for person in site.persons %}
+                    {% if person.key == person_key %}
+                         <li>{{person.first_name}} {{person.last_name}}</li>
+                        {% assign known = true %}
+                    {% endif %}
+                {% endfor %}
+                {% if known == false %}
+                     <li>{{person_key}}</li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+        </div>
+        {% endif %}
+
+
+    </article>
+    <article class="publication-content-aside">
+
+        {% if page.logo %}
+        	<img id="funding-image" alt="{{ page.agebct }}"  src="{{ site.baseurl }}/assets/images/grants/{{ page.logo }}">
+        {% endif %}
+
+        <h3>Funded by</h3>
+        <span>{{ page.agency }}</span>
+        {% if page.number %}
+
+        {% if page.agency-website %}
+        <h3>Number</h3>
+        <i class="fa fa-external-link"></i> &nbsp;<a href="{{ page.agency-website }}">{{page.number}}</a>
+        {% else %}
+        <h3>Number</h3>
+        <span>{{page.number}}</span>
+        {% endif %}
+        {% endif %}
+
+        {% if page.collaborative-award %}<br>
+        <i class="fa fa-external-link"></i> &nbsp;<a href="{{ page.collaborative-award }}">Collaborative Award</a>
+        {% endif %}
+
+        {% if page.program %}
+        <h3>Program</h3>
+        <span>{{page.program}}</span>
+        {%endif%}
+
+        <h3>Period</h3>
+        <span>{{page.time}}</span>
+
+        {% assign known = false %}
+
+        <h3>Principal Investigator</h3>
+        <span>
+             <ul>
+             <li>
+            {% include person_name_link.html key=page.pi %}
+             </li>
+             </ul>
+        </span>
+
+             {% if page.copi %}
+        <h3>Co-Principal Investigator(s):</h3>
+        <ul>
+
+            {% for copi in page.copi %}
+                <li>
+                {% include person_name_link.html key=copi %}
+                </li>
+            {% endfor %}
+
+        </ul>
+        {% endif %}
+
+     {% if page.coinvestigators %}
+        <h3>Co-Investigator(s):</h3>
+        <ul>
+
+            {% for coinvestigator in page.coinvestigators %}
+                <li>
+                {% include person_name_link.html key=coinvestigator %}
+                </li>
+            {% endfor %}
+
+        </ul>
+        {% endif %}
+
+        {% if page.recipients %}
+        <h3>Institutions:</h3>
+        <ul>
+            {% for recipient in page.recipients %}
+            <li> {{ recipient }}</li>
+            {% endfor %}
+        </ul>
+        {% endif %}
+
+        {% if page.partners %}
+        <h3>Partners</h3>
+        <span>{{page.partners}}</span>
+        {%endif%}
+
+        {% if page.award %}
+        <h3>Awarded Amount:</h3>
+        <span>{{page.award}}</span>
+        {% endif %}
+
+        {% if page.award-utah %}
+        <h3>Share at Utah:</h3>
+        <span>{{page.award-utah}}</span>
+        {% endif %}
+
+        {% if page.award-lab %}
+        <h3>Share at VDL:</h3>
+        <span>{{page.award-lab}}</span>
+        {% endif %}
+
+        {% if page.updated %}
+        <h3>Last Updated</h3>
+        <span>{{page.updated}}</span>
+        {% endif %}
+
+
+    </article>
+</div>

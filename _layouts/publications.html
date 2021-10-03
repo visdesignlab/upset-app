@@ -1,0 +1,42 @@
+---
+layout: default
+---
+
+<div class="banner"> 
+</div>
+
+  <article class="publications-content">
+
+    {% assign publications = site.publications | sort: 'year' %}
+    {% assign publications = publications | sort: 'order' %}
+
+    {% for pub in site.publications %}
+      {% if pub.type == 'preprint' %}
+        {% assign haspreprints = true %}
+      {% endif %}
+    {% endfor %}
+
+    {% if haspreprints %}
+      <h1>Preprints</h1>
+      {% for publication in publications reversed %}
+        {% if publication.personal %}
+        {% elsif publication.type == 'preprint' %}
+          {% include publication_list_entry.html %}
+        {% endif %}
+      {% endfor %}
+    {% endif %}
+
+    <h1>Peer-Reviewed Journal and Conference Papers </h1>
+
+    {% for publication in publications reversed %}
+      {% if publication.personal %}
+      {% elsif publication.type == "paper" %}
+        {% include publication_list_entry.html %}
+      {% endif %}
+    {% endfor %}
+
+
+
+
+
+  </article>

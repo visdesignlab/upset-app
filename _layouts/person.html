@@ -1,0 +1,348 @@
+---
+layout: default
+---
+
+<!-- FLAGS TO DETERMINE WHAT TO RENDER -->
+{% assign haspreprints = false %}
+{% for publication in site.publications reversed %}
+{% if publication.type == "preprint" %}
+{% for author in publication.authors %}
+{% if author == page.key %}
+{% assign haspreprints = true %}
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endfor %}
+
+{% assign haspublications = false %}
+{% for publication in site.publications reversed %}
+{% if publication.type == "paper" %}
+{% for author in publication.authors %}
+{% if author == page.key %}
+{% assign haspublications = true %}
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endfor %}
+
+{% assign hascommentary = false %}
+{% for publication in site.publications reversed %}
+{% if publication.type == "commentary" %}
+{% for author in publication.authors %}
+{% if author == page.key %}
+{% assign hascommentary = true %}
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endfor %}
+
+{% assign hasthesis = false %}
+{% for publication in site.publications reversed %}
+{% if publication.type == "thesis" %}
+{% for author in publication.authors %}
+{% if author == page.key %}
+{% assign hasthesis = true %}
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endfor %}
+
+{% assign hasposter = false %}
+{% for publication in site.publications reversed %}
+{% if publication.type == "poster" %}
+{% for author in publication.authors %}
+{% if author == page.key %}
+{% assign hasposter = true %}
+{% endif %}
+{% endfor %}
+{% endif %}
+{% endfor %}
+
+
+{% assign hastalks = false %}
+{% for talk in site.talks reversed %}
+{% if talk.speaker == page.key %}
+{% assign hastalks = true %}
+{% endif %}
+{% endfor %}
+
+{% assign haspress = false %}
+{% for article in site.data.press %}
+{% if article.user == page.key %}
+{% assign haspress = true %}
+{% endif %}
+{% endfor %}
+
+<div class="person">
+    <header class="person-title"><h1>{{page.first_name}} {{page.last_name}}</h1></header>
+
+</div>
+
+
+<div class="publication-content-main">
+
+
+    {{ page.content }}
+
+    {% if hastalks %}
+    <br>
+    <div style="width:100%; float:none">
+    <span class="home-button nav-text">
+    <a href="#publications">Publications</a>
+    </span>
+    <span class="home-button nav-text">
+    <a href="#projects">Projects</a>
+    </span>
+        <span class="home-button nav-text">
+    <a href="#talks">Talks</a>
+    </span>
+        <span class="home-button nav-text">
+    <a href="#teaching">Teaching</a>
+    </span>
+        <span class="home-button nav-text">
+    <a href="#press">Press</a>
+    </span>
+    </div>
+    <br>
+    {% endif %}
+
+
+</div>
+
+
+<div class="publication-content-aside">
+    <img alt="{{ page.first_name }} {{ page.last_name }}" class="person-img color0 person-image-large"
+         title="{{ page.first_name }} {{ page.last_name }}" src="{{ site.baseurl }}{{ page.image }}">
+    <br>
+
+    {{ page.first_name }} {{ page.last_name }}, {{ page.degree}} <br>
+    {{ page.position}} <br>
+    <p>
+        <b>Contact</b> <br>
+        <a href="mailto:{{ page.email }}"><i class="fa fa-envelope"></i> {{ page.email }}</a> <br>
+        SCI Institute, <br>
+        School of Computing, <br>
+        University of Utah <br>
+        <a href="https://www.google.com/maps/place/Scientific+Computing+and+Imaging+Institute+(SCI+Institute)/@40.7682198,-111.876249,14.58z/data=!4m8!1m2!3m1!2sScientific+Computing+and+Imaging+Institute+(SCI+Institute)!3m4!1s0x0:0xed3af30fcd0bf927!8m2!3d40.7677941!4d-111.8449938"><i class="fa fa-map-marker"></i> 72 South Central Campus Drive,<br>
+            Salt Lake City, Utah 84112 </a><br>
+        {% if page.room %}
+        Room: {{ page.room }}
+        {% endif %}
+    </p>
+
+    <p>
+        {% if page.cv %}
+        <a href="{{page.cv}}"><i class="fa fa-file-text"></i> Curriculum Vitae</a><br>
+        {% endif %}
+        {% if page.gs %}
+        <a href="{{ page.gs }}"><i class="fa fa-google"></i> Google Scholar</a><br>
+        {% endif %}
+        {% if page.twitter %}
+        <a href="http://twitter.com/{{page.twitter}}"><i class="fa fa-twitter"></i> Twitter</a><br>
+        {% endif %}
+        {% if page.github %}
+        <a href="{{page.github}}"><i class="fa fa-github"></i> GitHub</a><br>
+        {% endif %}
+        {% if page.office-hours %}
+        <br>
+        Office Hours: {{page.office-hours}} 
+        {% endif %}
+    </p>
+</div>
+
+
+<div  class="publication-content">
+
+    {% if haspublications or haspreprints or hascommentary or hasthesis or hasposter %}
+
+
+        <h2 id="publications">Publications</h2>
+
+    {% assign publications = site.publications | sort: 'year' %}
+    {% assign publications = publications | sort: 'order' %}
+
+        {% if haspreprints %}
+        <h3>Preprints</h3>
+            {% for publication in publications reversed %}
+                {% if publication.type == "preprint" %}
+                    {% for author in publication.authors %}
+                        {% if author == page.key %}
+                            {% include publication_list_entry.html %}
+                        {% endif %}
+                    {% endfor %}
+                {% endif %}
+            {% endfor %}
+        {% endif %}
+
+        {% if haspublications %}
+        <h3>Peer-reviewed Journal and Conference Publications</h3>
+        {% for publication in publications reversed %}
+        {% if publication.type == "paper" %}
+        {% for author in publication.authors %}
+        {% if author == page.key %}
+        {% include publication_list_entry.html %}
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+
+        {% if hascommentary %}
+        <h3>Commentary</h3>
+        {% for publication in publications reversed %}
+        {% if publication.type == "commentary" %}
+        {% for author in publication.authors %}
+        {% if author == page.key %}
+        {% include publication_list_entry.html %}
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+
+        {% if hasthesis %}
+        <h3>Thesis</h3>
+        {% for publication in publications reversed %}
+        {% if publication.type == "thesis" %}
+        {% for author in publication.authors %}
+        {% if author == page.key %}
+        {% include publication_list_entry.html %}
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+
+        {% if hasposter %}
+        <h3>Selected Posters</h3>
+        {% for publication in publications reversed %}
+        {% if publication.type == "poster" %}
+        {% for author in publication.authors %}
+        {% if author == page.key %}
+        {% include publication_list_entry.html %}
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+        {% endfor %}
+        {% endif %}
+
+    {% endif %}
+
+
+    {% if page.projects %}
+        <h2 id="projects">Funded Research Projects</h2>
+        {% for project_key in page.projects %}
+            {% for project in site.projects %}
+                {% if project.key == project_key %}
+                    {% include project_list_entry.html %}
+                {% endif %}
+            {% endfor %}
+        {% endfor %}
+    {% endif %}
+
+
+
+
+    {% if hastalks %}
+
+        <h2 id="talks">Talks</h2>
+
+         <h3>Keynote Talks</h3>
+        {% for talk in site.talks reversed %}
+        {% if talk.speaker == page.key %}
+        {% if talk.type == "keynote" %}
+        {% include talk_entry.html %}
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+
+
+        <h3>Invited Talks</h3>
+        {% for talk in site.talks reversed %}
+        {% if talk.speaker == page.key %}
+        {% if talk.type == "invited" %}
+        {% include talk_entry.html %}
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+
+        <h3>Paper Presentations</h3>
+        {% for talk in site.talks reversed %}
+        {% if talk.speaker == page.key %}
+        {% if talk.type == "paper" %}
+        {% include talk_entry.html %}
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+
+        <h3>Tutorials</h3>
+        {% for talk in site.talks reversed %}
+        {% if talk.speaker == page.key %}
+        {% if talk.type == "tutorial" %}
+        {% include talk_entry.html %}
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+
+        <h3>Panels</h3>
+        {% for talk in site.talks reversed %}
+        {% if talk.speaker == page.key %}
+        {% if talk.type == "panel" %}
+        {% include talk_entry.html %}
+        {% endif %}
+        {% endif %}
+        {% endfor %}
+    {% endif %}
+
+    {% if page.showteaching %}
+
+        <h2 id="teaching">Teaching</h2>
+
+        <h3>Current PhD Students</h3>
+
+        {% include students.html students=page.phd_students %}
+
+        {% if page.phd_rotation_students %}
+        <h3>Current PhD Rotation Students</h3>
+
+        {% include students.html students=page.phd_rotation_students %}
+        {% endif %}
+
+       <h3>Graduated PhD Students</h3>
+
+      {% include students.html students=page.phd_graduates %}
+
+        {% if page.ms_students %}
+        <h3>Current MS Students</h3>
+
+        {% include students.html students=page.ms_students %}
+        {% endif %}
+
+        {% if page.ug_students %}
+        <h3>Current Undergraduate Students</h3>
+
+        {% include students.html students=page.ug_students %}
+        {% endif %}
+
+        <h3>Former Students</h3>
+
+        {% include students.html students=page.former_students %}
+
+        <h3>Courses</h3>
+
+        {% include courses.html instructor=page.key %}
+
+    {% endif %}
+
+
+    {% if haspress %}
+
+        <h2 id="press">Press</h2>
+
+        {% include press.html user=page.key %}
+
+    {% endif %}
+
+</div>
+
+

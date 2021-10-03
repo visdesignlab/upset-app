@@ -1,0 +1,33 @@
+{% comment %}
+Usage: {% include video.html video_key=KEY %}
+{% endcomment %}
+
+{% for video in site.videos %}
+    {% if video.key == include.video_key %} 
+      {% assign video_object = video %}
+      {% endif %}
+      {% endfor %}
+
+
+<div class="video">
+      <p><b>{{video_object.name}}</b></p>
+      {% if video_object.youtube-id %}
+      <div class="video-wrapper">
+            <iframe width="853" height="480" src="https://www.youtube.com/embed/{{video_object.youtube-id}}" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      </div>
+      {% endif %}
+
+      {% if video_object.vimeo-id %}
+      <div class="video-wrapper">
+        <iframe width="853" height="480" src="https://player.vimeo.com/video/{{video_object.vimeo-id}}" frameborder="0" webkitallowfullscreen mozallowfullscreen allowfullscreen></iframe>
+      </div>
+      {% endif %}
+
+      {% if video_object.file %}
+      <p><i class="fa fa-download"></i> &nbsp;<a href="{{site.paper_content_url}}{{video_object.file}}">Download Video</a>
+      {% if video_object.subtitles %}
+      &nbsp;  <i class="fa fa-download"></i> &nbsp;<a href="{{site.paper_content_url}}{{video_object.subtitles}}">Download Subtitles</a>
+      {% endif %}
+      </p>
+      {% endif %}
+</div>

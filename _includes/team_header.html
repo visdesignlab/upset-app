@@ -1,0 +1,54 @@
+
+{% assign iter = 0 %}
+{% for person in site.persons %}
+{% if person.graduated %}
+{% elsif person.role == "faculty" %}
+  <a class="personKey {{ person.key}}" href="{{ person.website }}"><!-- onclick="selectPerson('{{ person.key }}')"> -->
+  {% if person.image %}
+    <img alt="{{ person.first_name }} {{ person.last_name }}" class="person-img person-image offset{{iter}}" title="{{ person.first_name }} {{ person.last_name }}" src="{{ site.baseurl }}{{ person.image }}" onmouseenter="highlightPerson('{{ person.key }}')" onmouseleave="clearClass('highlighted')">
+  {% else %}
+    <img alt="{{ person.first_name }} {{ person.last_name }}" class="person-img person-image offset{{iter}}" title="{{ person.first_name }} {{ person.last_name }}" src="http://www.centonovelosgatos.com/wp-content/uploads/2013/08/unknown-female.jpg" onmouseenter="highlightPerson('{{ person.key }}')" onmouseleave="clearClass('highlighted')">
+  {% endif %}
+  </a>
+  {% assign iter = iter | plus: 1 | modulo: 2 %}
+{% elsif person.role == "postdoc" or person.role == "phdstudent" or person.role == "phd_rotation" or person.role == "msstudent" or person.role == "undergrad" or person.role =="intern" or person.role =="visitor" or person.role =="engineer"%}
+  <a class="personKey {{ person.key}}" href="{{ person.website }}"><!--   onclick="selectPerson('{{ person.key }}')">-->
+  {% if person.image %}
+    <img alt="{{ person.first_name }} {{ person.last_name }}" class="person-img person-image-small offset{{iter}}" title="{{ person.first_name }} {{ person.last_name }}" src="{{ site.baseurl }}{{ person.image }}" onmouseenter="highlightPerson('{{ person.key }}')" onmouseleave="clearClass('highlighted')">
+  {% else %}
+    <img alt="{{ person.first_name }} {{ person.last_name }}" class="person-img person-image-small offset{{iter}}" title="{{ person.first_name }}  {{ person.last_name }}" src="http://www.centonovelosgatos.com/wp-content/uploads/2013/08/unknown-female.jpg" onmouseenter="highlightPerson('{{ person.key }}')" onmouseleave="clearClass('highlighted')">
+  {% endif %}
+  </a>
+  {% assign iter = iter | plus: 1 | modulo: 2 %}
+{% endif %}
+{% endfor %}
+
+<script>
+  // randomness to profile pictures (color, rotation, translation)
+  (function () {
+    var people = document.getElementsByClassName("person-img");
+    for(var i in people){
+      // catch non-properties
+      if(!people.hasOwnProperty(i)){
+        break;
+      }
+      
+      var rTransform = "";
+      // random colors
+      var rColor = Math.floor(Math.random() * 4);
+      people[i].className = people[i].className + " color" + rColor;
+      
+      // random rotation
+      var rRotation = Math.floor(Math.random() * 21) - 10;
+      rTransform += "rotate(" + rRotation + "deg)";
+      
+      // random translation
+      var rTranslationX = Math.floor(Math.random() * 11) - 5;
+      var rTranslationY = Math.floor(Math.random() * 11) - 5;
+      rTransform += " translate(" + rTranslationX + "px," + rTranslationY + "px)";
+      
+      // update random transformations
+     people[i].style.transform = rTransform;
+    }
+  })();
+</script>

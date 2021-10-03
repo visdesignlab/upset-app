@@ -1,0 +1,13 @@
+---
+layout: default
+first_name: Hanspeter
+last_name: Pfister
+key: pfister
+permalink: /persons/pfister/
+role: collaborator
+email: pfister@seas.harvard.edu
+image: /assets/images/people/pfister.jpg
+organization: Harvard University
+position: Professor
+website: http://vcg.seas.harvard.edu/people/hanspeter-pfister
+---

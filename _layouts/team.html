@@ -1,0 +1,179 @@
+---
+layout: default
+---
+<div class="team">
+
+  <!--<header class="team-title">
+    <h1>{{ page.title | remove: "| Vis Design Lab" }}</h1>
+  </header>-->
+
+	  <div class="banner-team">
+      {% include team_header.html %}
+	  </div>
+
+    {% for person in site.persons %}
+      {% if person.graduated == null %}
+        {% if person.role == 'phdstudent' %}
+          {% assign ifphdstudent = true %}
+        {% elsif person.role == 'phd_rotation' %}
+            {% assign phd_rotation = true %}
+        {% elsif person.role == 'postdoc' %}
+            {% assign ifpostdoc = true %}
+        {% elsif person.role == 'msstudent' %}
+            {% assign ifmsstudent = true %}
+        {% elsif person.role == 'undergrad' %}
+            {% assign ifundergrad = true %}
+        {% elsif person.role == 'visitor' %}
+          {% assign visitor = true %}
+        {% elsif person.role == 'intern' %}
+            {% assign ifintern = true %}
+        {% elsif person.role == 'engineer' %}
+			{% assign ifengineer = true %}
+        {% endif %}
+      {% endif %}
+    {% endfor %}
+
+  <article class="team-content">
+      <h1>Faculty</h1>
+
+      {% include person.html key="meyer" %}
+      {% include person.html key="lex" %}
+
+      {% if ifpostdoc %}
+      <p class="space">&nbsp;</p>
+      <h1>Post-Doctoral Fellows</h1>
+
+      {% include person.html role="postdoc" %}
+      {% endif %}
+
+
+      {% if ifphdstudent %}
+      <p class="space">&nbsp;</p>
+      <h1>PhD Students</h1>
+      {% include person.html role="phdstudent" %}
+      {% endif %}
+
+      {% if phd_rotation %}
+      <p class="space">&nbsp;</p>
+      <h1>PhD Rotation Students</h1>
+      {% include person.html role="phd_rotation" %}
+      {% endif %}
+
+       {% if visitor %}
+      <p class="space">&nbsp;</p>
+      <h1>Visitors</h1>
+      {% include person.html role="visitor" %}
+      {% endif %}
+
+      {% if ifmsstudent %}
+        <p class="space">&nbsp;</p>
+        <h1>Master's Students</h1>
+
+        {% include person.html role="msstudent" %}
+      {% endif %}
+
+      {% if ifundergrad %}
+        <p class="space">&nbsp;</p>
+        <h1>Undergraduate Students</h1>
+
+        {% include person.html role="undergrad" %}
+      {% endif %}
+
+      {% if ifintern %}
+        <p class="space">&nbsp;</p>
+        <h1>Interns</h1>
+      {% include person.html role="intern" %}
+      {% endif %}
+
+      {% if ifengineer %}
+		<p class="space">&nbsp;</p>
+		<h1>Software Engineers</h1>
+        {% include person.html role="engineer" %}
+      {% endif %}
+
+      <p class="space-alumni">&nbsp;</p>
+
+      <h1>PhD Graduates</h1>
+      <p class="person-list-block">
+      {% assign persons = site.persons | sort: 'graduated' %}
+      {% for p in persons %}
+      {% if p.graduated and p.phd_graduate %}
+      {% capture name %}{{ p.first_name }} {{ p.last_name }}{% endcapture %}
+      <span class="alumni">
+              {% if p.website %}
+              <a href="{{ p.website }}">{{ name }}</a>{% else %}{{ name }}{% endif %}{% if p.graduated != "N" %}, {{ p.graduated }}{% endif %}
+          </span>
+      {% endif %}
+      {% endfor %}
+      </p> <br><br>
+
+      <h1>Former PostDocs</h1>
+      <p class="person-list-block">
+      {% for p in site.persons %}
+      {% if p.postdoc_alumni %}
+      {% capture name %}{{ p.first_name }} {{ p.last_name }}{% endcapture %}
+      <span class="alumni">
+              {% if p.website %}
+              <a href="{{ p.website }}">{{ name }}</a>{% else %}{{ name }}{% endif %}
+          </span>
+      {% endif %}
+      {% endfor %}
+      </p> <br><br>
+
+
+      <h1>Other Alumni</h1>
+      <p class="person-list-block">
+      {% for p in site.persons %}
+        {% if p.graduated %}
+          {% if p.phd_graduate or p.postdoc_alumni%}
+          {% else %}
+        {% capture name %}{{ p.first_name }} {{ p.last_name }}{% endcapture %}
+          <span class="alumni">
+              {% if p.website %}
+              <a href="{{ p.website }}">{{ name }}</a>{% else %}{{ name }}{% endif %}{% if p.graduated != "N" %}, {{ p.graduated }}{% endif %}
+          </span>
+          {% endif %}
+        {% endif %}
+      {% endfor %}
+      </p>
+
+  </article>
+<script>
+  // use a person's key to go to their anchor tag
+  function selectPerson (key) {
+    // unselect any people
+    clearClass('selected');
+
+    // update for new selection
+    window.location.hash = key;
+    document.querySelector('a.personKey.' + key).scrollIntoView();
+
+    // use 'selection' class for marking image and person-block
+    document.querySelector('a.personKey.' + key + ' img').classList.add('selected');
+    document.querySelector('#' + key).classList.add('selected');
+  }
+
+  // highlight people temporarily
+  function highlightPerson (key) {
+    // use 'highlighted' class for marking image and person-block
+    document.querySelector('a.personKey.' + key + ' img').classList.add('highlighted');
+    document.querySelector('#' + key).classList.add('highlighted');
+  }
+
+  // clear desired class from people images and blocks
+  function clearClass (name) {
+    var allImages = document.querySelectorAll('a.personKey img');
+    var allBlocks = document.querySelectorAll('.person-list-block');
+    if (allImages.length > 0) {
+      [].forEach.call(allImages, function (img) {
+        img.classList.remove(name);
+      })
+    }
+    if (allBlocks.length > 0) {
+      [].forEach.call(allBlocks, function (block) {
+        block.classList.remove(name);
+      })
+    }
+  }
+</script>
+</div>

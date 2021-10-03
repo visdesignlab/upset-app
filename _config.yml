@@ -1,0 +1,43 @@
+# Site settings
+title: UpSet – Visualizing Intersecting Sets
+email: vdl-faculty@sci.utah.edu
+description: "Visualizing Set Visualizations with UpSet"
+baseurl: ""
+url: "https://upset.app"
+twitter_username: visdesignlab
+github_username: visdesignlab
+youtube_username:
+facebook_page:
+safe: false
+lsi: false
+google_analytics: "'UA-69348306-1'"
+use_analytics: true
+
+paper_content_url: https://sci.utah.edu/~vdl/papers/
+
+plugins:
+  - jekyll-redirect-from
+
+# Build settings
+permalink: pretty
+sass:
+  sass_dir: _sass
+# exclude from build
+exclude: ["README.md", ".idea/"]
+
+# Collections
+collections:
+  persons:
+    output: true
+  publications:
+    output: true
+    permalink: /publications/:path/
+  videos:
+    output: false
+  institutions:
+    output: false
+  projects:
+    output: true
+  talks:
+    output: false
+

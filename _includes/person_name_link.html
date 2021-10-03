@@ -1,0 +1,1 @@
+{% assign known = false %}{% for person in site.persons %}{% if include.key == person.key %}<a href="{{ person.website }}">{{ person.first_name }}&nbsp;{{ person.last_name }}</a>{% assign known = true %}{% endif %}{% endfor %}{% if known == false %}{{include.key}}{% endif %}

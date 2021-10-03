@@ -1,0 +1,44 @@
+<meta charset="utf-8">
+<title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
+<meta name="viewport" content="width=device-width">
+<meta name="description" content="{{ site.description }}">
+<link rel="canonical" href="{{ page.url | replace:'index.html','' | prepend: site.url }}">
+
+<!-- Custom CSS -->
+<link href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" rel="stylesheet">
+<link rel="stylesheet" href="{{ site.baseurl }}/css/site.css">
+
+<link rel="stylesheet" href="{{base.url}}/css/vdl_logo_styles.css">
+
+<!-- Fav and touch icons -->
+<link rel="shortcut icon" type="image/x-icon" href="{{ site.baseurl }}/favicon.ico" />
+<link rel="apple-touch-icon" href="{{ site.baseurl }}/favicon.png" />
+
+{% if page.layout == "post" %} 
+<meta name="twitter:image:src" content="{{ site.url }}{{page.lead-image}}"> 
+<meta property="og:image" content="{{ site.url }}{{ page.lead-image }}"> 
+{% endif %}
+
+{% if page.layout == "publication" %}
+  {% if page.image_large %}
+  <meta name="twitter:image:src" content="{{ site.url }}/assets/images/publications/{{page.image_large}}"> 
+  <meta property="og:image" content="{{ site.url }}/assets/images/publications/{{page.image_large}}" />
+  {% endif %}
+{% endif %}
+
+
+{% if page.layout == "publication" or page.layout == "post" %} <!-- metadata for link preview  -->
+  <!-- Twitter Card data -->
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:site" content="@visdesignlab">
+  <meta name="twitter:title" content="{{page.title}}">
+  <meta name="twitter:description" content="{{ page.abstract | strip_html }}">
+  <meta name="twitter:creator" content="@visdesignlab">
+ 
+
+  <!-- Open Graph data -->
+  <meta property="og:title" content="{{page.title}}" />
+  <meta property="og:type" content="article" />
+  <meta property="og:url" content="{{ page.url | replace:'index.html','' | prepend: site.url }}" />
+{% endif %}
+

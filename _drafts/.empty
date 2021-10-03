@@ -1,0 +1,3 @@
+Don't delete this file. This file makes sure that _drafts folder is not deleted. 
+Usually if there is no blog, git deletes this folder.
+It is confusing for someone who is not familiar with jekyll that this needs to be created.
