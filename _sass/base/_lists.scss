@@ -172,11 +172,11 @@ ul.publication-icon-list {
 }
 
 ul.institution-icon-list {
-  @include no-icon-list-images($team-color);  
+  @include no-icon-list-images($about-color);  
 }
 
 ul.person-icon-list {
-  @include icon-list($team-color,"\f007");
+  @include icon-list($about-color,"\f007");
 }
 
 ul.funding-icon-list {
