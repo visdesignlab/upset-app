@@ -5,7 +5,7 @@ weight: 1
 tag: home
 permalink: /
 ---
-{% capture path %}{{ site.baseurl }}/assets/images/projects/upset/{% endcapture %}
+{% capture path %}{{ site.baseurl }}/assets/images/{% endcapture %}
 
 # UpSet – Visualizing Intersecting Sets
 

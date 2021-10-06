@@ -1,28 +1,18 @@
-<!DOCTYPE html>
-<html>
-<head>
-    {% include head_default.html %}
+---
+layout: default
+title: Post | Vis Design Lab
+---
 
-    <!-- Here we write the publications into the publications javascript variable -->
-</head>
+<div class="home">
 
-<body>
+  <div class="banner">
+  </div>	
 
-<div class="wrap">
-{% include header.html %}
+  <article class="post-content-main">
+      
 
+          {{ content }}
+      </div>  
+  </article>
 
-  <article class="home-content-main">
-    
-
-    {{ content }}
-  </div>
-    
-
-{% if site.use_analytics == true %}
-{% include google_analytics.html %}
-{% endif %}
-<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/5.7.0/d3.min.js"></script>
-<script src="{{base.url}}/scripts/vdl_logo_script.js"></script>
-</body>
-</html>
+</div>

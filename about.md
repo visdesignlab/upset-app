@@ -8,17 +8,36 @@ permalink: /about/
 
 # About
 
+{% capture path %}{{ site.baseurl }}/assets/images/{% endcapture %}
 
-UpSet was originally developed at Harvard in 2014 by Alexander Lex, Nils Gehlenborg, Hendrik Strobelt, Romain Vuillemot, and Hanspeter Pfister and [published at IEEE VIS]({site.baseurl}}/publications/2014_infovis_upset/). 
-
-The figure below shows the first ever sketch of UpSet on a whiteboard, drawn around the end of 2013: 
-
-![Original UpSet Whiteboard Sketch]({{site.baseurl}}/assets/images/upset_whiteboard.jpg)
-
-As you can see, the final desing is fairly close to the very first sketch.
+UpSet was originally developed at Harvard in 2014 by [Alexander Lex](http://alexander-lex.net), [Nils Gehlenborg](http://gehlenborglab.org/), [Hendrik Strobelt](http://hendrik.strobelt.com/), [Romain Vuillemot](https://romain.vuillemot.net/), and [Hanspeter Pfister](https://vcg.seas.harvard.edu/people/hanspeter-pfister) and [published at IEEE VIS]({site.baseurl}}/publications/2014_infovis_upset/). 
 
 
-## Team
+This website is maintained by Alexander Lex. 
+
+## History
+
+The intention of UpSet plots was to solve the problem of set visualizations for more than three sets. Very specifically, it was inspired by the infamous six-set [banana venn diagram](https://www.nature.com/nature/journal/v488/n7410/full/nature11241.html).
+
+![UpSet Screenshot]({{path}}/banana.png)
+
+The idea behind upset is to make the intersection sizes easy to compare. 
+
+The figure below shows the first ever sketch of UpSet on a whiteboard, drawn in December 2013: 
+
+![Original UpSet Whiteboard Sketch]({{path}}/upset_whiteboard.jpg)
+
+As you can see, the final design is fairly close to the very first sketch.
+
+UpSet was also insipred by [Andrew Gelman's redesign challenge](https://statmodeling.stat.columbia.edu/2007/09/25/redoing_venn_di/), and particularily [Robert Kosara's contribution](https://eagereyes.org/criticism/autism-diagnosis-accuracy):
+
+![Venn diagrams and redesign using a tree and bars by Robert Kosara]({{path}}/autism-redesign.png)
+
+UpSets are also related to [Mosaic Plots](https://en.wikipedia.org/wiki/Mosaic_plot), and in particular to the [MANET implementation](http://www.rosuda.org/MANET/):
+
+![]({{path}}/manet_mosaic.png)
 
 
-{% include person_list_entry.html key="lex" %}
+
+
+
