@@ -3,6 +3,7 @@ layout: publication
 title: "UpSet: Visualization of Intersecting Sets"
 key: 2014_infovis_upset
 type: paper
+paper-page: https://vdl.sci.utah.edu/publications/2014_infovis_upset/
 
 shortname: UpSet
 image: 2014_infovis_upset.png

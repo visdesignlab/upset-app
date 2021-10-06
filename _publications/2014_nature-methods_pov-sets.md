@@ -3,6 +3,7 @@ layout: publication
 title: "Points of view: Sets and intersections"
 key: 2014_nature-methods_pov-sets.md
 type: commentary
+paper-page: https://vdl.sci.utah.edu/publications/2014_nature-methods_pov-sets/
 
 shortname: "PoV: Sets and intersections"
 image: 2014_nature-methods_pov-sets.png

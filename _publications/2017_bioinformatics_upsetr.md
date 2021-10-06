@@ -7,6 +7,7 @@ key: 2017_bioinformatics_upsetr
 redirect_from: /publications/2017_preprint_upsetr/
 # paper | poster | preprint
 type: paper
+paper-page: https://vdl.sci.utah.edu/publications/2017_bioinformatics_upsetr/
 
 # The shortname is used for auto-generated titels
 shortname: UpSetR
