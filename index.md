@@ -9,21 +9,43 @@ permalink: /
 
 # UpSet – Visualizing Intersecting Sets
 
-Understanding relationships between sets is an important analysis task. The major challenge in this context is the combinatorial explosion of the number of set intersections if the number of sets exceeds a trivial threshold. To address this, we introduce UpSet, a novel visualization technique for the quantitative analysis of sets, their intersections, and aggregates of intersections.
+Understanding relationships between sets is an important analysis task. The major challenge in this context is the combinatorial explosion of the number of set intersections if the number of sets exceeds a trivial threshold. To address this, we developed UpSet, a novel visualization technique for the quantitative analysis of sets, their intersections, and aggregates of intersections.
 
-![UpSet Screenshot]({{site.baseurl}}/assets/images/publications/2014_infovis_upset_teaser.png)
 
-UpSet is focused on creating task-driven aggregates, communicating the size and properties of aggregates and intersections, and a duality between the visualization of the elements in a dataset and their set membership. UpSet visualizes set intersections in a matrix layout. The matrix layout enables the effective representation of associated data, such as the number of elements in the aggregates and intersections, as well as additional summary statistics.
+<img style="padding-left: 5px; height: 400px" src="{{path}}/upsetr.png">
 
-Sorting according to various measures enables a task-driven analysis of relevant intersections and aggregates. The elements represented in the sets and their associated attributes are visualized in a separate view. Queries based on containment in specific intersections, aggregates, or driven by attribute filters are propagated between both views. UpSet also introduces several advanced visual encodings and interaction methods to overcome the problems of varying scales and to address scalability.
+UpSet visualizes set intersections in a matrix layout. The matrix layout enables the effective representation of associated data, such as the number of elements in the aggregates and intersections, as well as additional summary statistics.
 
-To get an idea of what UpSet is about, you can watch this 30-second video:
 
-{% include video_entry.html video_key="2014_infovis_upset_video_preview" %}
+<!-- <iframe height="500" width="600" data="{&quot;NavBar&quot;:false,&quot;FilterBox&quot;:false,&quot;DataSetInfo&quot;:false,&quot;LeftSideBar&quot;:false,&quot;RightSideBar&quot;:false,&quot;ProvenanceView&quot;:false,&quot;DeviationBars&quot;:false,&quot;CardinalityBars&quot;:false}" class="upset" src="https://vdl.sci.utah.edu/upset2/embed.html#{&quot;NavBar&quot;:false,&quot;FilterBox&quot;:false,&quot;DataSetInfo&quot;:false,&quot;LeftSideBar&quot;:false,&quot;RightSideBar&quot;:false,&quot;ProvenanceView&quot;:false,&quot;DeviationBars&quot;:false,&quot;CardinalityBars&quot;:true}"></iframe> -->
+
+## UpSet Explained
+
+UpSet plots the intersections of a set as a matrix, as shown in the figure on the right. Each column corresponds to a set, and bar charts on top show the size of the set. Each row corresponds to a possible intersection: the filled-in cells show which set is part of an intersection.
+
+<img style="padding-left: 5px; height: 400px" src="{{path}}/concept_1_matrix.png">
+
+
+Here you can see examples of how these intersections correspond to the segments in a Venn diagram. The first row in the figure is completely empty – it corresponds to all the elements that are in none of the sets. The second row corresponds to the elements that are only in the set A, (not in B or C), etc.
+<img style="padding-left: 5px; height: 400px" src="{{path}}/concept_2_intersections.png">
+
+This layout is great, because we can plot the size of the intersections (the “cardinality”) as bar charts right next ot the matrix, as you can see in the following example: 
+
+<img style="padding-left: 5px; height: 400px" src="{{path}}/concept_3_cardinality.png">
+
+The matrix is also very useful because it can be sorted in various ways. A common way is to sort by the cardinality (size).
+
+<img style="padding-left: 5px; height: 400px" src="{{path}}/concept_4_sorting.png">
+
+Finally, UpSet works just as well horizontally or vertically. We think that vertical layouts are better for interactive UpSet plots that can be scrolled, while horizontal layouts are best for figures in papers: 
+
+<img style="padding-left: 5px; height: 250px" src="{{path}}/concept_5_horizontal.png">
+
+ 
+
 
 ## Why UpSet?
 
-**See this related commentary:** [Points of view: Sets and intersections](https://dx.doi.org/10.1038/nmeth.3033). Alexander Lex, Nils Gehlenborg. Nature Methods, vol. 11, no. 8, pp. 779, 2014.
 
 Venn diagrams are a horrible way to visualize intersections of more than three or four sets. The figure below shows an example of a six-set venn diagram [published in Nature](https://www.nature.com/nature/journal/v488/n7410/full/nature11241.html) that shows the relationship between the banana's genome and the genome of five other species.
 
@@ -46,14 +68,7 @@ You might ask, how does the banana venn diagram look in UpSet? Here you go:
 
 Notice how easy it is to see trends: the vast majority of genes is shared between all plants, the first three species (Oryza_sativa, Sorghum_bicolor, and Brachypodium_distachyon) seem to be highly related, while the sixth species (Phoenix dactylifera) is most different from the others.
 
-## UpSet concept
-
-<img style="float: right; padding-left: 5px;" src="{{path}}/matrix.png">
-
-UpSet plots the intersections of a set as a matrix, as shown in the figure on the right. Each column corresponds to a set, and each row corresponds to one segment in a Venn diagram, as indicated in the figure. Cells are either empty (light-gray), indicating that this set is not part of that intersection, or filled, showing that the set is participating in the intersection. The first row in the figure is completely empty - it corresponds to all the elements that are in none of the sets, the second row corresponds to the elements that are only in the set A, (not in B or C), etc.
-
-<img style="float: left; width: 350px; padding-right: 5px;" src="{{path}}/upset_explained.svg">
-This layout is great, because we can plot the size of the intersections as bar charts right next ot the matrix, as you can see in the simple example on the left. This figure shows a Simpsons dataset in UpSet and in a corresponding Venn diagram. We can also sort in many different ways. Here we sort by the degree, i.e., by the number of sets that contribute to an intersection, but we can also dynamically sort by intersection size and other attributes.
+**See this related commentary:** [Points of view: Sets and intersections](https://dx.doi.org/10.1038/nmeth.3033). Alexander Lex, Nils Gehlenborg. Nature Methods, vol. 11, no. 8, pp. 779, 2014.
 
 
 ### More Information
@@ -64,8 +79,6 @@ For more details on the concept please refer to the [paper on UpSet]({{site.base
 
 In summary, if you want to visualize intersections of two or three sets - use a Venn diagram, everyone knows them.
 **For anything above three (and below ~40) sets - use UpSet!**
-
-
 
 
 

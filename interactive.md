@@ -8,7 +8,15 @@ permalink: /interactive/
 
 {% capture path %}{{ site.baseurl }}/assets/images/{% endcapture %}
 
+# Interactive UpSet Plots on the Web
 
+![UpSet Screenshot]({{site.baseurl}}/assets/images/publications/2014_infovis_upset_teaser.png)
+
+UpSet Web is focused on creating task-driven aggregates, communicating the size and properties of aggregates and intersections, and a duality between the visualization of the elements in a dataset and their set membership. 
+
+To get an idea of what the interactive UpSet is about, you can watch this 30-second video:
+
+{% include video.html video_key="2014_infovis_upset_video_preview" %}
 
 ### Aggregation
 
