@@ -21,7 +21,7 @@ UpSet visualizes set intersections in a matrix layout. The matrix layout enables
 
 ## UpSet Explained
 
-UpSet plots the intersections of a set as a matrix, as shown in the figure on the right. Each column corresponds to a set, and bar charts on top show the size of the set. Each row corresponds to a possible intersection: the filled-in cells show which set is part of an intersection.
+UpSet plots the intersections of a set as a matrix, as shown in the figure on the right. Each column corresponds to a set, and bar charts on top show the size of the set. Each row corresponds to a possible intersection: the filled-in cells show which set is part of an intersection. Also notice the lines connecting the filled-in cells: they show in which direction you should read the plot: 
 
 <img style="padding-left: 5px; height: 400px" src="{{path}}/concept_1_matrix.png">
 
@@ -41,6 +41,8 @@ Finally, UpSet works just as well horizontally or vertically. We think that vert
 
 <img style="padding-left: 5px; height: 250px" src="{{path}}/concept_5_horizontal.png">
 
+
+These are the basiscs of UpSet! There's a lot more than you can do with UpSet plots, such as visualize attributes of the intersections, or group intersections. Look at the various pages for details. 
  
 
 
