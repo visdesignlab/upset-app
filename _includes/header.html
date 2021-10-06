@@ -4,7 +4,7 @@
   </div>
   <div class="navigation-buttons">
     <ul>
-      {% assign navButtons = "home|Versions|Interactive|publications|examples|about" | split: "|" %}
+      {% assign navButtons = "home|versions|interactive|publications|examples|about" | split: "|" %}
       {% for nav in navButtons %}
       {% assign navURL = nav %}
       {% assign pageURL = page.url %}
