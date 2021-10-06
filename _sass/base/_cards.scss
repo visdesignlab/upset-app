@@ -86,7 +86,7 @@
   }
 
   .card-header-project {
-    @include card-header($project-color);
+    @include card-header($main-color);
   }
 
   .card-header-funding {

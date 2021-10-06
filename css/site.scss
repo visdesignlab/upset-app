@@ -26,7 +26,7 @@ $large-display: new-breakpoint(min-width 1200px $large-display-columns);
   float: left;
   text-align: left;
   margin-right: 30px;
-  width: 80px;
+  width: 95px;
 
   &:last-child {
     margin-right: 0px;
@@ -213,7 +213,7 @@ $large-display: new-breakpoint(min-width 1200px $large-display-columns);
   float: left;
   padding-top: 65px;
   padding-bottom: 15px;
-
+ 
   @include media($small-display) {
     margin-left: 0px;
     padding-top: 0px;
@@ -259,38 +259,11 @@ body {
   }
 }
 
-.home-button {
-  @include navigation-button($home-color);
-}
-
-.about-button {
-  @include navigation-button($about-color);
+.nav-button {
+  @include navigation-button($main-color);
 }
 
 
-.publications-button {
-  @include navigation-button($home-color);
-  width: 120px;
-}
-
-.blog-button {
-  @include navigation-button($about-color);
-}
-
-
-.culture-button {
-  @include navigation-button($home-color);
-}
-
-.positions-button {
-  @include navigation-button($about-color);
-}
-
-
-
-.project-button {
-  @include navigation-button($home-color);
-}
 
 .award {
   color: $publication-color
@@ -344,19 +317,19 @@ body {
 }
 
 .projects-title {
-  @include page-title($project-color);
+  @include page-title($main-color);
 }
 
 .project-title {
-  @include subpage-title($project-color);
+  @include subpage-title($main-color);
 }
 
 .person-title {
-  @include subpage-title($about-color);
+  @include subpage-title($main-color);
 }
 
 .about-title {
-  @include page-title($about-color);
+  @include page-title($main-color);
 }
 
 .funding-title {
@@ -372,7 +345,7 @@ body {
 }
 
 .home-title {
-  @include page-title($home-color);
+  @include page-title($main-color);
 }
 
 .publications-title {
@@ -388,11 +361,11 @@ body {
 }
 
 .download-title {
-  @include page-title($download-color);
+  @include page-title($main-color);
 }
 
 .release-title {
-  @include subpage-title($download-color);
+  @include subpage-title($main-color);
 }
 
 @mixin single-column-content() {
@@ -717,9 +690,9 @@ a.project-website {
   .post-list-title {
     color: $dark-blue;// #F1F2F2;
     //color: lighten(#F1F2F2,0.5);
-    //background: lighten($home-color, 30%);
+    //background: lighten($main-color, 30%);
     
-    //border-color: $home-color;
+    //border-color: $main-color;
     //font-family: $sans-serif-font-family;
     font-family: $condensed-font-family;
     font-weight: 700;
@@ -749,7 +722,7 @@ a.project-website {
       padding: 3px 0px;
       color: $dark-blue;
   
-      border-bottom: 2px $home-color solid;
+      border-bottom: 2px $main-color solid;
       //height: 30px;
       //background-color: #444;
   
@@ -760,7 +733,7 @@ a.project-website {
   
       &:focus, &:hover, &:active, &.active {
         //height: 30px;
-        border-bottom: 5px $home-color solid;
+        border-bottom: 5px $main-color solid;
       }
     }
   

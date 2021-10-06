@@ -55,29 +55,6 @@ UpSet plots the intersections of a set as a matrix, as shown in the figure on th
 <img style="float: left; width: 350px; padding-right: 5px;" src="{{path}}/upset_explained.svg">
 This layout is great, because we can plot the size of the intersections as bar charts right next ot the matrix, as you can see in the simple example on the left. This figure shows a Simpsons dataset in UpSet and in a corresponding Venn diagram. We can also sort in many different ways. Here we sort by the degree, i.e., by the number of sets that contribute to an intersection, but we can also dynamically sort by intersection size and other attributes.
 
-### Aggregation
-
-<img style="float: right; padding-left: 5px;" src="{{path}}/matrix_aggregation.png">
-In many cases, analysts are interested in understanding more complex set relationships than just individual intersections. UpSet addresses this by making use of aggregations. Aggregations summarize multiple intersection according to a specific pattern. The figure on the right shows an aggregation by sets. Note the extra row labeled "A" - it summarizes all of the intersections where A participates, as shown in the corresponding Venn diagram. These aggregations can show data just the same way as individual intersections can, but they can be collapsed to show only the aggregate, as is the case for B and C in the figure.
-
-<img style="float: left; width: 300px; padding-right: 5px;" src="{{path}}/aggregate.png">
-UpSet supports various types of aggregation. The figure on the left, for example, aggregates the Simpsons dataset by degree, but aggregation by sets, pairwise aggregation, and nested aggregation is also possible.
-
-### Queries
-
-A concept closely related to aggregation is querying: UpSet allows users to define a group of intersections that **must**, **may**, or **must not** include a specific set. The query in the following picture defines a subset of Simpsons characters that are either exclusively male or that have blue hair and aren't male. The first part of the query (first row) is indicated by two empty circles in the evil and blue hair cells. This part is combined as an "or" with the second part, that is set to "must" for blue hair, "may" for evil and "must not" for male.
-
-![Query Screenshot]({{path}}/query.png)
-
-UpSet can also query based on attributes. For example, you could define a query that only includes all Simpsons characters that are older than 18 years.
-
-### Visualizing Attributes
-
-UpSet visualizes numerical attributes of the intersections and aggregates as boxplots in line with the matrix rows (see image below). Additional attributes can be visualized for selections in the Element View, for example, in scatterplots or histograms. The figure below shows two queries, a violet and a green one. The green query is active (see the green overlays on the bars, the green table header and the green dots in the scatterplot). The violet query is evident in the scatterplot and is indicated with triangles on the bars.
-
-![UpSet Screenshot]({{path}}/upset_overview.png)
-
-The elements of the active selection are shown in a scrollable table.
 
 ### More Information
 
@@ -88,45 +65,8 @@ For more details on the concept please refer to the [paper on UpSet]({{site.base
 In summary, if you want to visualize intersections of two or three sets - use a Venn diagram, everyone knows them.
 **For anything above three (and below ~40) sets - use UpSet!**
 
-## UpSetR - Creating UpSet plots in R
-
-Many scientists use R as part of their analysis workflow. To allow those analysts to easily produce high-resolution figures of set intersections within their workflow that can be used in publications, we have developed an R version of UpSet.
-
-![UpSet Screenshot]({{path}}/upsetr.png)
-
-UpSetR has many of the features of our interactive UpSet plots, specifically it comes with various ways to sort and filter intersections and can plot attributes about the elements in the various sets. The layout is slightly adapted - intersections are plotted horizontally instead of vertically, which is beneficial for the typical aspect ratios found in papers. UpSetR does not include the aggregation features of UpSet, does not provide summary statistics about the intersections in line with the set cardinality, and does not provide access to the individual items.
-
-To learn more about UpSetR visit the [source code repository](https://github.com/hms-dbmi/UpSetR) which includes documentation on usage, or check out the released versions on [CRAN](https://cran.r-project.org/web/packages/UpSetR/), or try the [UpSetR shiny app](https://upsetr.shinyapps.io/UpSetR-shiny/).
-
-## pyUpSet - Creating UpSet plots in Python
-
-pyUpSet has a similar use case to UpSetR but is developed for Python. While UpSetR is directly influenced by Caleydo team members, pyUpSet is developed independently, yet we appreciate the port. pyUpSet is [available on github](https://github.com/ImSoErgodic/py-upset).
-
-## UpSet 2.0
-<a id="upset2"></a>
-
-<div>
-<iframe height="700" width="700" data="{&quot;NavBar&quot;:false,&quot;FilterBox&quot;:true,&quot;DataSetInfo&quot;:true,&quot;LeftSideBar&quot;:true,&quot;RightSideBar&quot;:false,&quot;ProvenanceView&quot;:false,&quot;DeviationBars&quot;:true,&quot;CardinalityBars&quot;:true}" style="overflow:scroll" class="upset" src="https://vdl.sci.utah.edu/upset2/embed.html#{&quot;NavBar&quot;:false,&quot;FilterBox&quot;:false,&quot;DataSetInfo&quot;:false,&quot;LeftSideBar&quot;:true,&quot;RightSideBar&quot;:false,&quot;ProvenanceView&quot;:false,&quot;DeviationBars&quot;:true,&quot;CardinalityBars&quot;:true}"></iframe>
-</div>
-
-<center style="text-align: center">
-  <em>
-    The interactive embedded version of UpSet 2.0
-  </em>
-</center>
 
 
-The new version of the tool is live [here](https://vdl.sci.utah.edu/upset2/).
-
-The features in new version are:
-
-- Data Upload
-- Provenance Integration
-- Embedding as iFrames (see [above](#upset2))
-- Downloading of selections
-- Use UpSet as library
-
-The embed code for the above widget is:
 
 
 ## Frequently Asked Questions
@@ -149,16 +89,3 @@ The embed code for the above widget is:
 - _Which Browsers are supported?_  
     We currently test only on the latest version of Google Chrome. Other recent browsers might work too.
 
-## Contact
-
-If you have any questions, please [e-mail us](mailto:alex@sci.utah.edu;nils@hms.harvard.edu). If you found a bug, you can directly report it at the [GitHub project site](https://github.com/vcg/upset).
-
-## Acknowledgements
-
-We wish to thank our collaborators, Anne Mai Wassermann, Soohyun Lee, Michele Coscia and Frank Neffke for their time and expertise. We also thank Bilal Alsallakh, Silvia Miksch and the whole Radial Sets team for providing feedback and datasets.
-
-Explore other set visualization techniques at [http://setviz.net/](http://setviz.net/)
-
-UpSet is supported in part by the Austrian Science Fund (J 3437-N15), the Air Force Research Laboratory and DARPA grant FA8750-12-C-0300 and the United States NIH/National Human Genome Research Institute (K99 HG007583).
-
-UpSet uses the D3 library for visualization. The music in the preview video is by Roulet, "I Can Make This", licensed under creative commons.

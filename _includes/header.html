@@ -4,7 +4,7 @@
   </div>
   <div class="navigation-buttons">
     <ul>
-      {% assign navButtons = "home|publications|about" | split: "|" %}
+      {% assign navButtons = "home|Versions|Interactive|publications|examples|about" | split: "|" %}
       {% for nav in navButtons %}
       {% assign navURL = nav %}
       {% assign pageURL = page.url %}
@@ -14,19 +14,20 @@
       {% endif %}
 
       {% if pageURLSplit[1] == navURL %}
-      <li class="{{ nav }}-button">
+      <!-- the active page -->
+      <li class="nav-button">
         <a class="active" href="{{ site.baseurl }}/{{ navURL }}/">
           <span class="nav-text">{{ nav | upcase }}</span></a>
       </li>
 
       {% elsif navURL == "" and pageURL == "/" %}
-      <li class="{{ nav }}-button">
+      <li class="nav-button">
         <a class="active" href="{{ site.baseurl }}/">
           <span class="nav-text">{{ nav | upcase }}</span></a>
       </li>
 
       {% else %}
-      <li class="{{ nav }}-button">
+      <li class="nav-button">
         <a href="{{ site.baseurl }}/{{ navURL }}">
           <span class="nav-text">{{ nav | upcase }}</span></a>
       </li>

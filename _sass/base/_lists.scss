@@ -159,69 +159,33 @@ ul {
 	   
 
 ul.project-icon-list {
-  @include icon-list($project-color,"\f013");
+  @include icon-list($main-color,"\f013");
 }
 
 ul.release-icon-list {
-  @include icon-list($download-color,"\f019");
+  @include icon-list($main-color,"\f019");
 }
 
 ul.publication-icon-list {
   //@include icon-list($publication-color,"\f02d");
-  @include pub-list($recent-publications-color);
+  @include pub-list($main-color);
 }
 
 ul.institution-icon-list {
-  @include no-icon-list-images($about-color);  
+  @include no-icon-list-images($main-color);  
 }
 
 ul.person-icon-list {
-  @include icon-list($about-color,"\f007");
+  @include icon-list($main-color,"\f007");
 }
 
 ul.funding-icon-list {
-  @include icon-list($neutral-color,"\f19c");
+  @include icon-list($main-color,"\f19c");
 }
 
 ul.source-icon-list {
-  @include icon-list($neutral-color,"\f09b");
+  @include icon-list($main-color,"\f09b");
 }
-
-
-
-/*
- ul.project-list {
-    margin: 0;
-    padding: 0;
-    list-style-type: none;
-
-    li {
-      padding-left: 2.5em ;
-      line-height: $base-font-size * 2;
-      vertical-align: middle;
-      color: $project-color;
-      font-family: $sans-serif-font-family;
-      font-weight: 700;
-      font-size: $base-font-size;
-      font-style: normal;
-
-      a {        
-        color: $project-color;
-      }
-    }
-    li:before {
-      content: "\f013";
-      color: $project-color;      
-      font-family: FontAwesome;
-      display: inline-block;
-      margin-left: -2em;
-      padding-left: 0.35em;
-      margin-right: 0.5em;
-      width: 1.25em;
-      height: 1.5em;
-    }  
-  }
-*/
 
 dl {
   margin-bottom: $base-line-height / 2;

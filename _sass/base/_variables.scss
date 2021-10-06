@@ -23,14 +23,8 @@ $light-green: #E6EFC2;
 $blue2:#3376A0;
 $dark-blue:#2C3E50;
 
-//$home-color: #AD3A33;
-$home-color: #C03A2B;
-//$home-color: #149747;
-//$team-color: #D44942;
-$about-color:#3376A0;
-//$team-color: #3DB7DD;
-$project-color: #EB0021;
-$download-color: #F36229;
+$main-color: #3376A0;
+
 
 //$publication-color: #D66157;
 //$publication-color: #3376A0;
@@ -39,7 +33,7 @@ $publication-color: #E58035;
 $recent-publications-color:#3376A0; //this is being darkened somewhere...
 //$publication-color: #4CB0D8;
 //$publication-color: #FDB938;
-$presentation-color: $download-color;
+$presentation-color: $main-color;
 $help-color: #B2B2B2;
 $neutral-color: $help-color;
 

@@ -38,6 +38,19 @@ UpSets are also related to [Mosaic Plots](https://en.wikipedia.org/wiki/Mosaic_p
 ![]({{path}}/manet_mosaic.png)
 
 
+## Contact
+
+If you have any questions, please [e-mail us](mailto:alex@sci.utah.edu;nils@hms.harvard.edu). 
+
+## Acknowledgements
+
+We want to thank all developers that have created versions of UpSet, and all the users of the various versions!
+
+We wish to thank our collaborators: Anne Mai Wassermann, Soohyun Lee, Michele Coscia and Frank Neffke for their time and expertise. We also thank Bilal Alsallakh, Silvia Miksch and the whole Radial Sets team for providing feedback and datasets.
+
+Explore other set visualization techniques at [http://setviz.net/](http://setviz.net/)
+
+
 
 
 
