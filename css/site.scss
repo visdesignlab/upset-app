@@ -96,7 +96,7 @@ $large-display: new-breakpoint(min-width 1200px $large-display-columns);
 .banner {
   display: block;
   //height: 40px;
-  margin-top: 40px;
+  //margin-top: 40px;
   margin-bottom: 40px;
   //margin-bottom: 20px;
   //padding-bottom:20px;
@@ -197,9 +197,9 @@ $large-display: new-breakpoint(min-width 1200px $large-display-columns);
 
 .navigation {
   display: block;
-  height: 40px;
-  margin-bottom: 20px;
-  padding-bottom: 20px;
+  //height: 40px;
+  //margin-bottom: 20px;
+  //padding-bottom: 20px;
   width: 100%;
 
   @include media($small-display) {
@@ -211,7 +211,7 @@ $large-display: new-breakpoint(min-width 1200px $large-display-columns);
 .navigation-buttons {
   display: block;
   float: left;
-  padding-top: 65px;
+  padding-top: 15px;
   padding-bottom: 15px;
  
   @include media($small-display) {
@@ -222,20 +222,12 @@ $large-display: new-breakpoint(min-width 1200px $large-display-columns);
 }
 
 .logo {
-  float: right;
   margin-right: 0px;
+  margin-left: 0px;
 
   @include media($small-display) {
     padding-top: 5px;
     margin-right: 0px;
-  }
-}
-
-.logo-header-svg {
-  height: 40px;
-
-  @include media($small-display) {
-    height: 20px;
   }
 }
 

@@ -1,7 +1,9 @@
-<div class="navigation">
-  <div id="svg" class="logo">
-    <!-- <img style="height: 100px" src="{{ site.baseurl }}/assets/images/logos/vdl.png" alt="vdl logo"> -->
+
+  <div class="logo">
+    <img style="height: 100px" src="{{ site.baseurl }}/assets/images/logos/upset_logo.png" alt="UpSet Logo">
   </div>
+<div class="navigation">
+ 
   <div class="navigation-buttons">
     <ul>
       {% assign navButtons = "home|versions|interactive|publications|examples|about" | split: "|" %}
@@ -15,6 +17,7 @@
 
       {% if pageURLSplit[1] == navURL %}
       <!-- the active page -->
+      
       <li class="nav-button">
         <a class="active" href="{{ site.baseurl }}/{{ navURL }}/">
           <span class="nav-text">{{ nav | upcase }}</span></a>
@@ -35,4 +38,5 @@
       {% endfor %}
     </ul>
   </div>
+
 </div>
