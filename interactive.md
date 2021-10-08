@@ -14,6 +14,12 @@ permalink: /interactive/
 
 UpSet Web is focused on creating task-driven aggregates, communicating the size and properties of aggregates and intersections, and a duality between the visualization of the elements in a dataset and their set membership. 
 
+UpSet has three guiding principles:
+
+- Use **perceptually efficient visual encodings**, i.e., make it easy to read the data accurately.
+- Make it possible to not just visualize intersections, but to **visualize combinations of intersections** (e.g., all the intersections involving two particular sets).
+- **Visualize attributes about the intersections**. It is not just the magnitude of an intersection that is interesting, but we also want to know whether the data associated with intersection is different or similar.
+
 To get an idea of what the interactive UpSet is about, you can watch this 30-second video:
 
 {% include video.html video_key="2014_infovis_upset_video_preview" %}
@@ -43,6 +49,9 @@ UpSet visualizes numerical attributes of the intersections and aggregates as box
 The elements of the active selection are shown in a scrollable table.
 
 
+{% include video_entry.html key="2014_infovis_upset_video" %}
+
+
 
 ## UpSet 2.0
 <a id="upset2"></a>
@@ -69,4 +78,19 @@ The features in new version are:
 - Use UpSet as library
 
 The embed code for the above widget is:
+
+
+
+# FAQ
+
+- _Can I download UpSet and use it locally for my confidential data?_  
+    Yes, you can download upset from the [source code repository](https://github.com/VCG/upset), which also provides [some instructions on local deployment](https://github.com/VCG/upset/blob/master/README.md).
+
+
+- _Do you provide documentation for UpSet?_  
+    Yes, through the [GitHub Wiki](https://github.com/VCG/upset/wiki). Right now it only covers data import, but more will follow soon. Don't forget to watch the videos! They give you a good idea on how things are done.
+
+- _Which Browsers are supported?_  
+    We currently test only on the latest version of Google Chrome. Other recent browsers might work too.
+
 

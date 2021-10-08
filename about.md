@@ -10,10 +10,10 @@ permalink: /about/
 
 {% capture path %}{{ site.baseurl }}/assets/images/{% endcapture %}
 
-UpSet was originally developed at Harvard in 2014 by [Alexander Lex](http://alexander-lex.net), [Nils Gehlenborg](http://gehlenborglab.org/), [Hendrik Strobelt](http://hendrik.strobelt.com/), [Romain Vuillemot](https://romain.vuillemot.net/), and [Hanspeter Pfister](https://vcg.seas.harvard.edu/people/hanspeter-pfister) and [published at IEEE VIS]({site.baseurl}}/publications/2014_infovis_upset/). 
+UpSet was originally developed at Harvard in 2014 by [Alexander Lex](http://alexander-lex.net), [Nils Gehlenborg](http://gehlenborglab.org/), [Hendrik Strobelt](http://hendrik.strobelt.com/), [Romain Vuillemot](https://romain.vuillemot.net/), and [Hanspeter Pfister](https://vcg.seas.harvard.edu/people/hanspeter-pfister) and [published at IEEE VIS]({site.baseurl}}/publications/2014_infovis_UpSet/). 
 
 
-This website is maintained by Alexander Lex. 
+This website is maintained by [Alexander Lex](http://alexander-lex.net). 
 
 ## History
 
@@ -21,7 +21,7 @@ The intention of UpSet plots was to solve the problem of set visualizations for 
 
 ![UpSet Screenshot]({{path}}/banana.png)
 
-The idea behind upset is to make the intersection sizes easy to compare. 
+The idea behind UpSet is to make the intersection sizes easy to compare. 
 
 The figure below shows the first ever sketch of UpSet on a whiteboard, drawn in December 2013: 
 
@@ -40,15 +40,13 @@ UpSets are also related to [Mosaic Plots](https://en.wikipedia.org/wiki/Mosaic_p
 
 ## Contact
 
-If you have any questions, please [e-mail us](mailto:alex@sci.utah.edu;nils@hms.harvard.edu). 
+If you have any questions, please [e-mail us](mailto:alex@sci.utah.edu). 
 
 ## Acknowledgements
 
 We want to thank all developers that have created versions of UpSet, and all the users of the various versions!
 
-We wish to thank our collaborators: Anne Mai Wassermann, Soohyun Lee, Michele Coscia and Frank Neffke for their time and expertise. We also thank Bilal Alsallakh, Silvia Miksch and the whole Radial Sets team for providing feedback and datasets.
-
-Explore other set visualization techniques at [http://setviz.net/](http://setviz.net/)
+We also wish to thank our collaborators on the original UpSet paper: Anne Mai Wassermann, Soohyun Lee, Michele Coscia and Frank Neffke for their time and expertise. We also thank Bilal Alsallakh, Silvia Miksch and the whole Radial Sets team for providing feedback and datasets.
 
 
 

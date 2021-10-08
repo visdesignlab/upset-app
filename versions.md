@@ -8,14 +8,20 @@ permalink: /versions/
 
 {% capture path %}{{ site.baseurl }}/assets/images/{% endcapture %}
 
+# Versions of UpSet
 
+The basic idea of UpSet has been implemented many times. Here we list the available implementations and describe their main benefits and drawbacks. 
 
-## Interactive UpSet on the Web
+## Interactive, Web Based Versions
+
+### The Original UpSet
+
+### UpSet 2 – A Rewrite of UpSet
 
 
 ## UpSet for R
 
-### UpSetR - Creating UpSet plots in R
+### UpSetR
 
 Many scientists use R as part of their analysis workflow. To allow those analysts to easily produce high-resolution figures of set intersections within their workflow that can be used in publications, we have developed an R version of UpSet.
 
@@ -25,6 +31,7 @@ UpSetR has many of the features of our interactive UpSet plots, specifically it 
 
 To learn more about UpSetR visit the [source code repository](https://github.com/hms-dbmi/UpSetR) which includes documentation on usage, or check out the released versions on [CRAN](https://cran.r-project.org/web/packages/UpSetR/), or try the [UpSetR shiny app](https://upsetr.shinyapps.io/UpSetR-shiny/).
 
+### 
 
 ## UpSet for Python
 
