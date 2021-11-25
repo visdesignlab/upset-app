@@ -10,7 +10,8 @@ youtube_username:
 facebook_page:
 safe: false
 lsi: false
-google_analytics: "'UA-69348306-1'"
+google_analytics: "'G-6Q77MCTCTY
+'"
 use_analytics: true
 
 paper_content_url: https://sci.utah.edu/~vdl/papers/
