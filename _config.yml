@@ -10,8 +10,7 @@ youtube_username:
 facebook_page:
 safe: false
 lsi: false
-google_analytics: "'G-6Q77MCTCTY
-'"
+google_analytics: "'G-6Q77MCTCTY'"
 use_analytics: true
 
 paper_content_url: https://sci.utah.edu/~vdl/papers/
@@ -41,4 +40,6 @@ collections:
     output: true
   talks:
     output: false
+  upsetversions: 
+    output: true
 
