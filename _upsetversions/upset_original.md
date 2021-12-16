@@ -10,3 +10,5 @@ authors: Alexander Lex et al
 publication: https://vdl.sci.utah.edu/publications/2014_infovis_upset/ 
 ---
 The original UpSet, developed to go with the original paper. 
+
+
