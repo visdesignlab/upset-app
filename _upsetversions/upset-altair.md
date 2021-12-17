@@ -6,7 +6,7 @@ type: Static plot
 source: https://github.com/hms-dbmi/upset-altair-notebook
 web: http://upset.plus/covid19symptoms/
 image: upset-altair.png
-authors: 
+authors: "Sehi L'Yi, Nils Gehlenborg"
 publication: 
 language: Python
 license: MIT License
