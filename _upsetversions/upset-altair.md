@@ -10,8 +10,8 @@ authors:
 publication: 
 language: Python
 license: MIT License
-maintained: yes
-interactive: yes
+maintained: true
+interactive: true
 inline-attribute-vis: false
 attribute-views: false
 aggregation: false
