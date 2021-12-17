@@ -8,11 +8,18 @@ title: Post | Vis Design Lab
   <div class="banner">
   </div>	
 
+ 
+
   <article class="post-content-main">
       
 
           {{ content }}
       </div>  
   </article>
+
+  <div class="toc post-content-aside">
+    <h1>Contents</h1>
+    {% include toc.html html=content%}
+    </div> 
 
 </div>

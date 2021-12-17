@@ -118,81 +118,6 @@ $large-display: new-breakpoint(min-width 1200px $large-display-columns);
       margin-bottom: 100px;
     }
   }
-
-  #left-banner-image-title, #top-right-banner-image-title, #bottom-right-banner-image-title {
-    line-height: $base-line-height;
-  }
-
-  .banner-image-title {
-    font-family: $condensed-font-family;
-    font-weight: 500;
-    color: #3376A0;
-    margin-left: 2px;
-    display: block;
-    max-width: 95%;
-    white-space: nowrap;
-    overflow: hidden;
-    text-overflow: ellipsis;
-    @include media($small-display) {
-      display: none;
-    }
-  }
-
-  #main-banner-image {
-    line-height: $base-font-size;
-    @include span-columns(8);
-    float: left;
-    margin-top: $base-line-height;
-    margin-right: 1%;
-    //    margin-bottom: 5px;
-    //	  padding: 15px;
-    //    padding-bottom: 44px;
-    //	  border: 2px solid $dark-blue;
-    @include media($medium-display) {
-      margin-right: 0.9%;
-      //      padding: 18px;
-      //      padding-bottom: 48px;
-    }
-    @include media($small-display) {
-      @include span-columns(12 of 12);
-      margin-bottom: 1.5%;
-      //      margin-top: 15px;
-      //      margin-bottom: 5px;
-      //      padding: 15px;
-    }
-  }
-
-  #top-right-banner-image {
-    line-height: $base-font-size;
-    @include span-columns(4);
-    margin-right: 0;
-    margin-bottom: 0.9%;
-    //	  padding: 10px;
-    //	  border: 2px solid $dark-blue;
-    @include media($medium-display) {
-      margin-bottom: 0.7%;
-
-    }
-    @include media($small-display) {
-      @include span-columns(49 of 100);
-      margin-right: 2%;
-      //      margin-bottom: 15px;
-    }
-  }
-
-  #bottom-right-banner-image {
-    line-height: $base-font-size;
-    @include span-columns(4);
-    //	  padding: 10px;
-    margin-right: 0;
-    //	  border: 2px solid $dark-blue;
-    @include media($medium-display) {
-
-    }
-    @include media($small-display) {
-      @include span-columns(49 of 100);
-    }
-  }
 }
 
 .navigation {
@@ -253,6 +178,23 @@ body {
 
 .nav-button {
   @include navigation-button($main-color);
+}
+
+/* table of content styling */
+.toc {
+  margin-left: 10px; 
+  ul {
+    margin-left: 0; padding-left: 5px;
+  }
+
+  li
+  {
+    list-style: none; 
+  }
+  @include media($small-display) {
+   visibility: hidden;
+   height: 0px;
+  }
 }
 
 
@@ -727,6 +669,7 @@ a.project-website {
         //height: 30px;
         border-bottom: 5px $main-color solid;
       }
+      
     }
   
   }

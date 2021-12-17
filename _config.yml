@@ -18,6 +18,8 @@ paper_content_url: https://sci.utah.edu/~vdl/papers/
 plugins:
   - jekyll-redirect-from
 
+auto_ids: true
+
 # Build settings
 permalink: pretty
 sass:

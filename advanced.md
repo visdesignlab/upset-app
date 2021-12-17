@@ -8,6 +8,7 @@ permalink: /advanced/
 
 {% capture path %}{{ site.baseurl }}/assets/images/advanced/{% endcapture %}
 
+
 # Advanced UpSet Features
 
 In addition to the basic UpSet feature of visualizing set intersections, there are more advanced analysis questions that UpSet can help answer. 
@@ -42,18 +43,18 @@ In many cases, analysts are interested in understanding more complex set relatio
 
 UpSet plots can be aggregated in various ways, we show a few common variations below.
 
-**Aggregate by Sets**
+### Aggregate by Sets
 
 ![UpSet Screenshot]({{path}}/aggregate_sets.png)
 
 Aggregation by sets gives a nice overview of the properties of the set, and selectively uncollapsing, as done for the “Action” genre here, enables analysts to inspect the composition of individual sets. 
 
-**Aggregate by Degree**
+### Aggregate by Degree
 ![UpSet Screenshot]({{path}}/aggregate_degree.png)
 
 Aggregation by degree is an efficient method to inspect whether most items are part of none, one, two or more other sets. 
 
-**Nested Aggregation**
+### Nested Aggregation
 ![UpSet Screenshot]({{path}}/aggregate_nested.png)
 
 Nested aggregation is an advanced approach that is most useful to see pairwise overlaps between sets. In the above screenshot, the first level of aggregation is sets, the second is overlaps (all interesections that overlap between two sets). Combined, this results in a view that lets analysts efficiently analyze which sets interact with each other. 
