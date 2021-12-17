@@ -42,7 +42,7 @@ Many scientists use R as part of their analysis workflow. To allow those analyst
 {% include version_list_entry.html key="complex_upset" %}
 
 
-{% include version_list_entry.html key="upset-complexheatmap" %}
+{% include version_list_entry.html key="upset_complex_heatmap" %}
 
 
 
