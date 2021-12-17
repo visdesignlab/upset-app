@@ -9,7 +9,7 @@ documentation: https://medium.com/@sgratzl/upset-js-the-upset-js-ecosystem-ab669
 image: upset.js.png
 authors: "[Samuel Gratzl](https://www.sgratzl.com)"
 publication:
-language: JavaScript,Python,R,PowerBI,Tableau,ObservableHQ
+language: JavaScript, Python, R, PowerBI, Tableau, ObservableHQ
 license: GNU AGPLv3 (private, academic) + Commercial License Available
 maintained: yes
 interactive: yes
