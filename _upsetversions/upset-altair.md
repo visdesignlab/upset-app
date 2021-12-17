@@ -8,20 +8,20 @@ web: http://upset.plus/covid19symptoms/
 image: upset-altair.png
 authors: 
 publication: 
-language:
-license:
-maintained: 
-interactive: 
-inline-attribute-vis: 
-attribute-views: 
-aggregation: 
-item-queries: 
-set-queries: 
-shows-deviation: 
-export: 
-format-table: 
-format-list: 
-format-set-expression: 
+language: Python
+license: MIT License
+maintained: true
+interactive: true
+inline-attribute-vis: false
+attribute-views: false
+aggregation: false
+item-queries: false
+set-queries: false
+shows-deviation: false
+export: true
+format-table: false
+format-list: false
+format-set-expression: false
 ---
 
 An implementation of an UpSet Plot in [Altair](https://altair-viz.github.io/).
