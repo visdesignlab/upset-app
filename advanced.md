@@ -16,7 +16,13 @@ In addition to the basic UpSet feature of visualizing set intersections, there a
 
 ## Visualizing Attributes
 
+
+
 In addition to set memberships of items, it is frequently useful to also visaulize attributes about the items in intersections. We could use this to, for example, compare properties of two intersections, e.g., to compare ratings of movies in the “Adventure” genre with movies in the ”Documentary” genre. UpSet plots can visualize attributes in two ways: inline, or in separate views. 
+
+<div class="note">
+Attribute visualizations are supported in most upset versions. 
+</div>
 
 ### Inline Attribute Visualization
 
@@ -43,6 +49,11 @@ In many cases, analysts are interested in understanding more complex set relatio
 
 UpSet plots can be aggregated in various ways, we show a few common variations below.
 
+
+<div class="note">
+Aggregation is only supported in the interactive, web-based UpSet versions.
+</div>
+
 ### Aggregate by Sets
 
 ![UpSet Screenshot]({{path}}/aggregate_sets.png)
@@ -61,11 +72,74 @@ Nested aggregation is an advanced approach that is most useful to see pairwise o
 
 ## Queries
 
-A concept closely related to aggregation is querying: UpSet allows users to define a group of intersections that **must**, **may**, or **must not** include a specific set. The query in the following picture defines a subset of Simpsons characters that are either exclusively male or that have blue hair and aren't male. The first part of the query (first row) is indicated by two empty circles in the evil and blue hair cells. This part is combined as an "or" with the second part, that is set to "must" for blue hair, "may" for evil and "must not" for male.
+A concept closely related to aggregation is querying; querying 
+
+
+### Querying for Items
+
+Items can be queried by some attribute, and the distribution of these items across intersections can be shown. The example below shows a query for movies with an average rating between 4 and 5 in green. 
+
+![A query based on attributes in UpSet.]({{path}}/attribute_query.png)
+
+<div class="note">
+Unfortunately, item-based queries are rarely available in current implementations. The feature is broken in the web-based versions. Complex UpSet for R makes it possible to map attributes to the intersection size bars, which is related. 
+</div>
+
+### Querying for Intersections
+
+It's equally possible to define a group of intersections that **must**, **may**, or **must not** include a specific set. The query in the following picture defines a subset of Simpsons characters that are either exclusively male or that have blue hair and aren't male. The first part of the query (first row) is indicated by two empty circles in the evil and blue hair cells. This part is combined as an "or" with the second part, that is set to "must" for blue hair, "may" for evil and "must not" for male.
 
 ![Query Screenshot]({{path}}/query.png)
 
-UpSet can also query based on attributes. For example, you could define a query that only includes all Simpsons characters that are older than 18 years.
+The result is a group of all intersection that match the query: 
 
+![Query Screenshot]({{path}}/query_result.png)
+
+
+
+
+## UpSet Data Formats
+
+UpSet plots can generally consume three different data formats: tabular, lists, and set-expressions. Tabular is the most expressive format, but the other formats can be useful in some contexts. 
+
+### Tabular 
+
+The tabular expression comes with a list of items, and a binary matrix (one-hot encoding) of set membership. Additional attributes can be added as extra columns. 
+
+Here's an example: 
+
+| Name     | School | Blue Hair | Male | Power Plant | Age |
+|----------|--------|-----------|------|-------------|-----|
+| Lisa     | 1      | 0         | 0    | 0           | 8   |
+| Bart     | 1      | 0         | 1    | 0           | 10  |
+| Homer    | 0      | 0         | 1    | 1           | 40  |
+| Marge    | 0      | 1         | 0    | 0           | 36  |
+| Maggie   | 0      | 0         | 0    | 0           | 1   |
+| Mr Burns | 0      | 0         | 1    | 1           | 90  |
+
+School, Blue Hair, Male, and Power Plant are set columns, Age is an attribute column. 
+
+### Lists
+
+Lists explicitly list the sets and which items are in the set. For example: 
+
+```
+School: Lisa, Bart
+Blue Hair: Marge
+Male: Bart, Homer, Mr Burns
+Power Plant: Homer, Mr Burns
+```
+
+There is no standard way to handle attributes in this case. 
+
+### Set-Expressions
+
+Finally, set-expression explicitly specify the size of each intersection: 
+
+```
+School: 1, School&Male: 1, Male&Power Plant: 2, Blue-Hair: 1
+```
+
+Set-Expressions can't handle attributes. In fact, they don't even have information about the items. 
 
 

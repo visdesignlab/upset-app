@@ -4,7 +4,7 @@ key: complex_upset
 name: Complex Upset
 type: Static plot
 source: https://github.com/krassowski/complex-upset
-web: https://krassowski.github.io/complex-upset/index.htmlcom
+web: https://krassowski.github.io/complex-upset/index.html
 image: complex_upset.png
 authors: 
 publication: 

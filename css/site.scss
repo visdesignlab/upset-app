@@ -1235,7 +1235,7 @@ pre.bibtex {
 
 .note {
   padding: 20px;
-  padding-bottom: 5px;
+  //padding-bottom: 10px;
   overflow-x: auto;
   background: #f0f7fb;
   color: #2b2a2a;
@@ -1254,9 +1254,10 @@ pre.bibtex {
 
 .ref {
   padding-top: 10px;
-  padding-bottom: 10px;
+  padding-bottom: 0px;
   font-style: italic;
   font-size: 0.8em;
+
 
 }
 
