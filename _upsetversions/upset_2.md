@@ -8,19 +8,20 @@ web: https://vdl.sci.utah.edu/upset2/
 image: upset2.png
 authors: Kiran Gadhave, Alexander Lex
 publication: https://vdl.sci.utah.edu/publications/2019_infovis_upset/
-language:
-license:
-maintained: 
-interactive: 
-inline-attribute-vis: 
-attribute-views: 
-aggregation: 
-item-queries: 
-set-queries: 
-shows-deviation: 
-export: 
-format-table: 
-format-list: 
-format-set-expression: 
+language: TypeScript
+license: MIT
+maintained: yes
+interactive: yes
+inline-attribute-vis: yes
+attribute-views: yes
+aggregation: yes
+item-queries: no
+set-queries: no
+shows-deviation: yes
+export: yes
+format-table: yes
+format-list: no
+format-set-expression: no
 ---
-A re-implementation of the original UpSet. Key new featuresa re undo/redo functionality, embedding, and being able to download sets of items in a csv file. 
+
+A re-implementation of the original UpSet. Key new featuresa re undo/redo functionality, embedding, and being able to download sets of items in a csv file.
