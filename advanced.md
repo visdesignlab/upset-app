@@ -43,7 +43,7 @@ Different UpSet implementations allow different approaches for selecting and exp
 
 ## Visualizing Deviations
 
-As discussed in the [Interpreting UpSet section]({{site.base_url/#interpreting-upset-plots}}), we must be careful interpreting UpSet plots when the set sizes deviate a lot. 
+As discussed in the [Interpreting UpSet section]({{site.base_url}}/#interpreting-upset-plots), we must be careful interpreting UpSet plots when the set sizes deviate a lot. 
 
 ![UpSet and unequal set sizes.]({{path}}/unequal_set_size.png)
 
