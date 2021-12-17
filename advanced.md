@@ -41,6 +41,13 @@ Additional attributes can be visualized for selections in separate views, for ex
 Different UpSet implementations allow different approaches for selecting and exporting these items. 
 
 
+## Visualizing Deviations
+
+As discussed in the [Interpreting UpSet section]({{site.base_url/#interpreting-upset-plots}}), we must be careful interpreting UpSet plots when the set sizes deviate a lot. 
+
+![UpSet and unequal set sizes.]({{path}}/unequal_set_size.png)
+
+The 2-set combination of “Drama” and “Comedy”  is the largest two-set intersection, yet this is caused only by these two sets being very large to begin with. To address this, it is possible to shows metrics that indicate how much an intersection deviates from the expected size. In the example, we see that the comedy-drama intersection is actually much smaller than it should be if the data were random. 
 
 ## Aggregation & Grouping
 
