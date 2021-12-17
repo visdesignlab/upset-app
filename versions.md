@@ -60,11 +60,11 @@ Many scientists use R as part of their analysis workflow. To allow those analyst
 
 ## UpSet for BI Applications
 
+**[UpSet.JS](#UpSet.js), described above, is available as a plug-in for PowerBI and Tableau.**
 
 {% include version_list_entry.html key="upset-tableau" %}
 
 
-{% include version_list_entry.html key="upset-powerbi" %}
 
 
 

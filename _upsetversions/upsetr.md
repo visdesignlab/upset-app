@@ -6,7 +6,7 @@ type: Static plot
 source: "https://github.com/hms-dbmi/UpSetR"
 web: http://gehlenborglab.org/research/projects/upsetr/
 image: upsetr.png
-authors: Jake Conway
+authors: Jake Conway, Alexander Lex, Nils Gehlenborg
 publication: https://vdl.sci.utah.edu/publications/2017_bioinformatics_upsetr/
 language:
 license:

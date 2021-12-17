@@ -6,7 +6,7 @@ type: Interactive, Web-Based
 source: https://github.com/visdesignlab/upset2
 web: https://vdl.sci.utah.edu/upset2/
 image: upset2.png
-authors: Alexander Lex et al
+authors: Kiran Gadhave, Alexander Lex
 publication: https://vdl.sci.utah.edu/publications/2019_infovis_upset/
 language:
 license:
