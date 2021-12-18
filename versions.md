@@ -1,16 +1,17 @@
 ---
 layout: home
-title: Versions | UpSet
+title: Implementations | UpSet
 weight: 2
 tag: versions
-permalink: /versions/
+permalink: /implementations/
+redirect_from: /versions/
 ---
 
 {% capture path %}{{ site.baseurl }}/assets/images/{% endcapture %}
 
 
 
-# Versions of UpSet
+# Implementations of UpSet
 
 
 
@@ -18,7 +19,7 @@ permalink: /versions/
 
 The basic idea of UpSet has been implemented many times. Here we list the available implementations and describe their main benefits and drawbacks. 
 
-## Interactive, Web Based Versions
+## Web Based Versions
 
 
 {% include version_list_entry.html key="upset_original" %}

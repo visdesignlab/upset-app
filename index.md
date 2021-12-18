@@ -7,7 +7,7 @@ permalink: /
 ---
 {% capture path %}{{ site.baseurl }}/assets/images/{% endcapture %}
 
-# UpSet – Visualizing Intersecting Sets
+# Visualizing Intersecting Sets
 
 Understanding relationships between sets is an important analysis task. The major challenge in this context is the combinatorial explosion of the number of set intersections if the number of sets exceeds a trivial threshold. The most common set visualization approach – Venn Diagrams – doesn't scale beyond three or four sets. **UpSet, in contrast, is well suited for the quantitative analysis of data with more than three sets.** 
 
@@ -86,7 +86,7 @@ These are the basiscs of UpSet! There's a lot more than you can do with UpSet pl
  
 
 
-## Comparing UpSet to Venn Diagrams
+## UpSet vs. Venn Diagrams
 
 
 Venn diagrams are not suitable to visualize intersections of more than three or four sets. The figure below shows an example of a six-set venn diagram [published in Nature](https://www.nature.com/nature/journal/v488/n7410/full/nature11241.html) that shows the relationship between the banana's genome and the genome of five other species by visualizing which genes are shared between the plant species.

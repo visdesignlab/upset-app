@@ -1,14 +1,14 @@
 ---
-layout: upset
+layout: home
 title: UpSet | UpSet
 tag: info
 permalink: /upset/
 ---
 
 
-<h1>The Original UpSet</h1>
+# The Original UpSet
 
-<b>This page is the “project page” for the original UpSet version and it's immediate derivative, UpSet2</b>
+**This page is the “project page” for the original UpSet version and it's immediate derivative, UpSet2.**
 
 
 UpSet is focused on creating task-driven aggregates, communicating the size and properties of aggregates and intersections, and a duality between the visualization of the elements in a dataset and their set membership. 

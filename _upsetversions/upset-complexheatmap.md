@@ -1,7 +1,7 @@
 ---
 layout: default
 key: upset_complex_heatmap
-name: UpSet plot in ComplexHeatmap
+name: UpSet in ComplexHeatmap
 type: Static
 source: https://github.com/jokergoo/ComplexHeatmap
 web: https://github.com/jokergoo/ComplexHeatmap
