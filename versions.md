@@ -29,6 +29,8 @@ The basic idea of UpSet has been implemented many times. Here we list the availa
 
 {% include version_list_entry.html key="upset.js" %}
 
+{% include version_list_entry.html key="upset_observable" %}
+
 
 
 
