@@ -2,7 +2,8 @@
 layout: default
 key: upset.js
 name: UpSet.js
-type: Interactive, Web-Based
+# types: tool, library, example
+type: library
 source: https://github.com/upsetjs
 web: https://upset.js.org
 documentation: https://medium.com/@sgratzl/upset-js-the-upset-js-ecosystem-ab6692d2f34a?source=friends_link&sk=6925bb1f754f4c480009d82720a796b9

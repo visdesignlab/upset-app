@@ -1,6 +1,6 @@
 {% for version in site.upsetversions %}
     {% if version.key == include.key %}
-<h3 id="{{ version.name | remove: " "}}">{{ version.name }}</h3>
+<h4 id="{{ version.name | remove: " "}}">{{ version.name }}</h4>
 
 <div style="padding-bottom: 50px;">
 	<img alt="{{ version.name }} screenshot" class="" src="{{ site.baseurl }}/assets/images/versions/{{ version.image }}">
