@@ -4,7 +4,7 @@ This website describes the UpSet set visualization technique and collects refere
 
 ## Contributions
 
-We encourage contributions in the form of edits or fixes, or, in particular, if you've developed or know of another implementation. Check out how to add an implementation in the [UpSet Implementations Readme](_upsetversions/README.md)
+We encourage contributions in the form of edits or fixes, or, in particular, if you've developed or know of another implementation. Check out how to add an implementation in the [UpSet Implementations Readme](_upsetversions/Readme.md).
 
 Ideally, you could submit a pull request, but e-mailing alex@sci.utah.edu will also do. 
 
