@@ -3,7 +3,7 @@
 To add a new UpSet implementation requires three steps: 
 
 1. Create a new md file in the _upsetversions collection, using the template provided below. You can also look at the [original upset](upset_original.md) file as a reference. 
-2. Add a picture of the techinque to [`assets/versions/'](../assets/versions).
+2. Add a picture of the techinque to [`assets/versions/'](../assets/images/versions).
 3. Add the technique at the right place in the [implementations.md](../implementations.md) file by calling this include with your key: 
 ```
 {% include version_list_entry.html key="upset_original" %}
