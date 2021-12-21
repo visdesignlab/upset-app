@@ -10,7 +10,7 @@ permalink: /about/
 
 {% capture path %}{{ site.baseurl }}/assets/images/{% endcapture %}
 
-UpSet was originally developed at Harvard in 2014 by [Alexander Lex](http://alexander-lex.net), [Nils Gehlenborg](http://gehlenborglab.org/), [Hendrik Strobelt](http://hendrik.strobelt.com/), [Romain Vuillemot](https://romain.vuillemot.net/), and [Hanspeter Pfister](https://vcg.seas.harvard.edu/people/hanspeter-pfister) and [published at IEEE VIS]({site.baseurl}}/publications/2014_infovis_UpSet/). 
+UpSet was originally developed at Harvard in 2014 by [Alexander Lex](http://alexander-lex.net), [Nils Gehlenborg](http://gehlenborglab.org/), [Hendrik Strobelt](http://hendrik.strobelt.com/), [Romain Vuillemot](https://romain.vuillemot.net/), and [Hanspeter Pfister](https://vcg.seas.harvard.edu/people/hanspeter-pfister) and [published at IEEE VIS](https://vdl.sci.utah.edu/publications/2014_infovis_upset/). 
 
 
 This website is maintained by [Alexander Lex](http://alexander-lex.net). 
