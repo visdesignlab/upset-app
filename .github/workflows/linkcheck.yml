@@ -1,0 +1,31 @@
+name: CheckLinks
+on:
+  push:
+    branches:
+      - '**'
+  schedule:
+    - cron: '13 10 * * *'
+
+jobs:
+  checklinks:
+    name: Check Links
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v2
+
+      - name: Setup ruby 2.7
+        uses: ruby/setup-ruby@v1
+        with:
+          ruby-version: 2.7
+
+      - name: Setup jekyll and htmlproofer
+        run: | 
+          gem install --no-document jekyll jekyll-redirect-from html-proofer
+
+      - name: Build jekyll website
+        run: jekyll build
+
+      - name: Check for broken links
+        run: |
+          cat .github/workflows/links_to_ignore.txt | htmlproofer --log-level :debug --http-status-ignore 999,301,0 --checks-to-ignore ImageCheck --typhoeus-config='{"headers":{"User-Agent":"Mozilla/5.0 (X11; Linux x86_64; rv:94.0) Gecko/20100101 Firefox/94.0"},"cookiefile":".cookies","cookiejar":".cookies"}' --url-ignore `xargs` ./_site
