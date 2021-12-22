@@ -30,6 +30,12 @@
           <span class="nav-text">{{ nav | upcase }}</span></a>
       </li>
 
+      {% elsif navURL == "" %}
+      <li class="nav-button">
+        <a href="{{ site.baseurl }}/">
+          <span class="nav-text">{{ nav | upcase }}</span></a>
+      </li>
+
       {% else %}
       <li class="nav-button">
         {% if navURL != ""%}

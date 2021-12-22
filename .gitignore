@@ -17,3 +17,5 @@ css/site.css
 *.pdf
 
 .DS_Store
+
+.cookies
