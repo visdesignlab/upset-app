@@ -27,7 +27,7 @@ Attribute visualizations are supported in most upset versions.
 ### Inline Attribute Visualization
 
 Inline attribute visualization makes it easy to make comparisons across all intersections that are currently shown. The idea is to simply plot an aggregate visualization, such as a box plot, a dot plot (strip plot), or a violin chart next to the bar that shows the size of the intersection. Below you see an example comparing the average ratings of movies that are in various genres.
-![UpSet Screenshot]({{path}}/upset_inline_attribute.png)
+![Inline attributes visualized as box plots.]({{path}}/upset_inline_attribute.png)
 
 Here we can see that the average rating for documentaries is higher than for the other genres. Ideally, an upset implenetation can also sort the intersections based on these attributes. 
 
@@ -36,7 +36,7 @@ Here we can see that the average rating for documentaries is higher than for the
 
 Additional attributes can be visualized for selections in separate views, for example, in scatterplots or histograms. The figure below shows two selections, a blue one, for “Documentary” moves, and an orange one for “Adventure” moves. A scatterplot shows average ratings versus release date for these two generes. Again, we see that documentearies have higher ratings, but also have only been produced more recently.  The blue selection is active, we see a full table of items of it. 
 
-![UpSet Screenshot]({{path}}/upset_separate_view_attribute.png)
+![Attributes visualized next to the upset view in a scatterplot and a table.]({{path}}/upset_separate_view_attribute.png)
 
 Different UpSet implementations allow different approaches for selecting and exporting these items. 
 
@@ -63,17 +63,17 @@ Aggregation is only supported in the interactive, web-based UpSet versions.
 
 ### Aggregate by Sets
 
-![UpSet Screenshot]({{path}}/aggregate_sets.png)
+![UpSet plot aggregated by sets.]({{path}}/aggregate_sets.png)
 
 Aggregation by sets gives a nice overview of the properties of the set, and selectively uncollapsing, as done for the “Action” genre here, enables analysts to inspect the composition of individual sets. 
 
 ### Aggregate by Degree
-![UpSet Screenshot]({{path}}/aggregate_degree.png)
+![UpSet plot aggregated by degree.]({{path}}/aggregate_degree.png)
 
 Aggregation by degree is an efficient method to inspect whether most items are part of none, one, two or more other sets. 
 
 ### Nested Aggregation
-![UpSet Screenshot]({{path}}/aggregate_nested.png)
+![Nested aggregation showing by sets and pairwise overlap showing the relationship between a set and all other sets.]({{path}}/aggregate_nested.png)
 
 Nested aggregation is an advanced approach that is most useful to see pairwise overlaps between sets. In the above screenshot, the first level of aggregation is sets, the second is overlaps (all interesections that overlap between two sets). Combined, this results in a view that lets analysts efficiently analyze which sets interact with each other. 
 
@@ -96,11 +96,11 @@ Unfortunately, item-based queries are rarely available in current implementation
 
 It's equally possible to define a group of intersections that **must**, **may**, or **must not** include a specific set. The query in the following picture defines a subset of Simpsons characters that are either exclusively male or that have blue hair and aren't male. The first part of the query (first row) is indicated by two empty circles in the evil and blue hair cells. This part is combined as an "or" with the second part, that is set to "must" for blue hair, "may" for evil and "must not" for male.
 
-![Query Screenshot]({{path}}/query.png)
+![The query interface in upset.]({{path}}/query.png)
 
 The result is a group of all intersection that match the query: 
 
-![Query Screenshot]({{path}}/query_result.png)
+![The results of the query.]({{path}}/query_result.png)
 
 
 
