@@ -1,8 +1,0 @@
-{% for article in site.data.press %}
-{% if article.user == include.user %}
-<p>
-    <b>{{article.publisher}}</b>, {{article.year}}<br>
-    <a href="{{article.website}}">{{article.title}}</a>
-</p>
-{% endif %}
-{% endfor %}
