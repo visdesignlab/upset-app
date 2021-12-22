@@ -32,7 +32,11 @@
 
       {% else %}
       <li class="nav-button">
+        {% if navURL != ""%}
         <a href="{{ site.baseurl }}/{{ navURL }}/">
+        {% else %}
+        <a href="{{ site.baseurl }}/">
+        {% endif %}
           <span class="nav-text">{{ nav | upcase }}</span></a>
       </li>
       {% endif %}
