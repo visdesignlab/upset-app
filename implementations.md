@@ -54,6 +54,12 @@ We distinguish between three-types of implementations:
 
 
 
+{% include version_list_entry.html key="upset-excel" %}
+
+
+
+
+
 
 
 
