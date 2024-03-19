@@ -54,7 +54,7 @@ UpSet plots the intersections of a set as a matrix, as shown in the following fi
 
 <img style="width: 350px; height: 400px" class="centered-image" src="{{path}}concept_1_matrix.svg" alt="Explaining the matrix approach in UpSet.">
 
-Here you can see examples of how these intersections correspond to the segments in a Venn diagram. The first row in the figure is completely empty – it corresponds to all the elements that are in none of the sets. The green (third) row corresponds to the elements that are only in set B, (not in A or C). The orange (fifth) row represents elements that are shared by sets A and B, but not with C. Finally, the last (violet) row represents the elements shared between alll sets. 
+Here you can see examples of how these intersections correspond to the segments in a Venn diagram. The first row in the figure is completely empty – it corresponds to all the elements that are in none of the sets. The green (third) row corresponds to the elements that are only in set B, (not in A or C). The orange (fifth) row represents elements that are shared by sets A and B, but not with C. Finally, the last (violet) row represents the elements shared between all sets. 
 
 <img style="height: 400px; width: 490.5px" class="centered-image" src="{{path}}concept_2_intersections.svg" alt="Explaining the intersections in UpSet">
 
