@@ -4,7 +4,7 @@ key: upset-excel
 name: UpSet in Excel
 type: Static plot
 source: 
-web: https://www.linkedin.com/pulse/vertical-upset-plot-excel-roberto-mensa-mhd5f/upset-e
+web: https://www.linkedin.com/pulse/vertical-upset-plot-excel-roberto-mensa-mhd5f/
 image: upset-excel.png
 authors: Roberto Mensa
 publication: 
