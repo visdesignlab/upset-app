@@ -8,7 +8,7 @@ permalink: /upset/
 
 # The Original UpSet
 
-**This page is the “project page” for the original UpSet version and it's immediate derivative, UpSet2.**
+**This page is the “project page” for the original UpSet version and its immediate derivative, UpSet2.**
 
 
 UpSet is focused on creating task-driven aggregates, communicating the size and properties of aggregates and intersections, and a duality between the visualization of the elements in a dataset and their set membership. 
