@@ -32,7 +32,7 @@ For more details, here's a 5 minute video:
 <a id="upset2"></a>
 
 <div>
-<iframe height="700" width="700" data="{&quot;NavBar&quot;:false,&quot;FilterBox&quot;:true,&quot;DataSetInfo&quot;:true,&quot;LeftSideBar&quot;:true,&quot;RightSideBar&quot;:false,&quot;ProvenanceView&quot;:false,&quot;DeviationBars&quot;:true,&quot;CardinalityBars&quot;:true}" style="overflow:scroll" class="upset" src="https://vdl.sci.utah.edu/upset2/embed.html#{&quot;NavBar&quot;:false,&quot;FilterBox&quot;:false,&quot;DataSetInfo&quot;:false,&quot;LeftSideBar&quot;:true,&quot;RightSideBar&quot;:false,&quot;ProvenanceView&quot;:false,&quot;DeviationBars&quot;:true,&quot;CardinalityBars&quot;:true}"></iframe>
+<iframe height="700" width="700" src="https://upset.multinet.app/?workspace=Upset+Examples&table=simpsons&sessionId=193"></iframe>
 </div>
 
 <center style="text-align: center">
