@@ -32,27 +32,26 @@ For more details, here's a 5 minute video:
 <a id="upset2"></a>
 
 <div>
-<iframe height="700" width="700" data="{&quot;NavBar&quot;:false,&quot;FilterBox&quot;:true,&quot;DataSetInfo&quot;:true,&quot;LeftSideBar&quot;:true,&quot;RightSideBar&quot;:false,&quot;ProvenanceView&quot;:false,&quot;DeviationBars&quot;:true,&quot;CardinalityBars&quot;:true}" style="overflow:scroll" class="upset" src="https://vdl.sci.utah.edu/upset2/embed.html#{&quot;NavBar&quot;:false,&quot;FilterBox&quot;:false,&quot;DataSetInfo&quot;:false,&quot;LeftSideBar&quot;:true,&quot;RightSideBar&quot;:false,&quot;ProvenanceView&quot;:false,&quot;DeviationBars&quot;:true,&quot;CardinalityBars&quot;:true}"></iframe>
+<iframe height="700" width="700" src="https://upset.multinet.app/?workspace=Upset+Examples&table=simpsons&sessionId=193"></iframe>
 </div>
 
 <center style="text-align: center">
   <em>
-    The interactive embedded version of UpSet 2.0
+    Embedded version of Upset 2.0 hosted on Multinet.
   </em>
 </center>
 
 
-The new version of the tool is live [here](https://vdl.sci.utah.edu/upset2/).
+The new version of the tool is live [here](https://upset.multinet.app)).
 
 The features in new version are:
 
-- Data Upload
+- Data Upload/Download
+- UpSet grammar generation
 - Provenance Integration
 - Embedding as iFrames (see [above](#upset2))
-- Downloading of selections
-- Use UpSet as library
-
-The embed code for the above widget is:
+- Use UpSet as library (work in progress)
+- Automatically generated alt-text/captioning (work in progress)
 
 
 
@@ -63,8 +62,8 @@ The embed code for the above widget is:
 
 
 - _Do you provide documentation for UpSet?_  
-    Yes, through the [GitHub Wiki](https://github.com/VCG/upset/wiki). Right now it only covers data import, but more will follow soon. Don't forget to watch the videos! They give you a good idea on how things are done.
+    Yes, [here](https://vdl.sci.utah.edu/upset2/). Currently this documentation is meant mostly for developers, but it is being updated as changes are made.
 
 - _Which Browsers are supported?_  
-    We currently test only on the latest version of Google Chrome. Other recent browsers might work too.
+    We currently test only on the latest version of Google Chrome and Firefox. Other recent browsers might work too.
 
