@@ -24,4 +24,4 @@ format-list: no
 format-set-expression: no
 ---
 
-A re-implementation of the original UpSet. Key new featuresa re undo/redo functionality, embedding, and being able to download sets of items in a csv file.
+A re-implementation of the original UpSet. Key new features are undo/redo functionality, embedding, and being able to download sets of items in a csv file.

@@ -1,10 +1,10 @@
 # Site settings
 title: UpSet – Visualizing Intersecting Sets
-email: alex@sci.utah.edu
+email: alexander.lex@gmail.com
 description: "Visualizing Set Data with UpSet"
 baseurl: ""
 url: "https://upset.app"
-twitter_username: alexander_lex
+twitter_username:
 github_username: visdesignlab
 youtube_username:
 facebook_page:

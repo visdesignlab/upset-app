@@ -12,6 +12,7 @@ permalink: /about/
 
 UpSet was originally developed at Harvard in 2014 by [Alexander Lex](http://alexander-lex.net), [Nils Gehlenborg](http://gehlenborglab.org/), [Hendrik Strobelt](http://hendrik.strobelt.com/), [Romain Vuillemot](https://romain.vuillemot.net/), and [Hanspeter Pfister](https://vcg.seas.harvard.edu/people/hanspeter-pfister) and [published at IEEE VIS](https://vdl.sci.utah.edu/publications/2014_infovis_upset/). 
 
+UpSet won the **IEEE InfoVis 10-year Test of Time Award in 2024**. Check out the [blog-post reflecting on the reasons behind UpSet's success](https://vdl.sci.utah.edu/blog/2024/10/16/upset_reflections/). 
 
 This website is maintained by [Alexander Lex](http://alexander-lex.net). 
 
@@ -29,7 +30,7 @@ The figure below shows the first ever sketch of UpSet on a whiteboard, drawn in 
 
 As you can see, the final design is fairly close to the very first sketch.
 
-UpSet was also insipred by [Andrew Gelman's redesign challenge](https://statmodeling.stat.columbia.edu/2007/09/25/redoing_venn_di/), and particularily [Robert Kosara's contribution](https://eagereyes.org/criticism/autism-diagnosis-accuracy):
+UpSet was also inspired by [Andrew Gelman's redesign challenge](https://statmodeling.stat.columbia.edu/2007/09/25/redoing_venn_di/), and particularly [Robert Kosara's contribution](https://eagereyes.org/criticism/autism-diagnosis-accuracy):
 
 ![Venn diagrams and redesign using a tree and bars by Robert Kosara]({{path}}/autism-redesign.png)
 

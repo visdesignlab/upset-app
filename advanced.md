@@ -18,7 +18,7 @@ In addition to the basic UpSet feature of visualizing set intersections, there a
 
 
 
-In addition to set memberships of items, it is frequently useful to also visaulize attributes about the items in intersections. We could use this to, for example, compare properties of two intersections, e.g., to compare ratings of movies in the “Adventure” genre with movies in the ”Documentary” genre. UpSet plots can visualize attributes in two ways: inline, or in separate views. 
+In addition to set memberships of items, it is frequently useful to also visualize attributes about the items in intersections. We could use this to, for example, compare properties of two intersections, e.g., to compare ratings of movies in the “Adventure” genre with movies in the ”Documentary” genre. UpSet plots can visualize attributes in two ways: inline, or in separate views. 
 
 <div class="note">
 Attribute visualizations are supported in most upset versions. 
@@ -29,12 +29,12 @@ Attribute visualizations are supported in most upset versions.
 Inline attribute visualization makes it easy to make comparisons across all intersections that are currently shown. The idea is to simply plot an aggregate visualization, such as a box plot, a dot plot (strip plot), or a violin chart next to the bar that shows the size of the intersection. Below you see an example comparing the average ratings of movies that are in various genres.
 ![Inline attributes visualized as box plots.]({{path}}/upset_inline_attribute.png)
 
-Here we can see that the average rating for documentaries is higher than for the other genres. Ideally, an upset implenetation can also sort the intersections based on these attributes. 
+Here we can see that the average rating for documentaries is higher than for the other genres. Ideally, an upset implementation can also sort the intersections based on these attributes. 
 
 
 ### Attributes in Separate Views
 
-Additional attributes can be visualized for selections in separate views, for example, in scatterplots or histograms. The figure below shows two selections, a blue one, for “Documentary” moves, and an orange one for “Adventure” moves. A scatterplot shows average ratings versus release date for these two generes. Again, we see that documentearies have higher ratings, but also have only been produced more recently.  The blue selection is active, we see a full table of items of it. 
+Additional attributes can be visualized for selections in separate views, for example, in scatterplots or histograms. The figure below shows two selections, a blue one, for “Documentary” moves, and an orange one for “Adventure” moves. A scatterplot shows average ratings versus release date for these two genres. Again, we see that documentaries have higher ratings, but also have only been produced more recently.  The blue selection is active, we see a full table of items of it. 
 
 ![Attributes visualized next to the upset view in a scatterplot and a table.]({{path}}/upset_separate_view_attribute.png)
 
@@ -65,7 +65,7 @@ Aggregation is only supported in the interactive, web-based UpSet versions.
 
 ![UpSet plot aggregated by sets.]({{path}}/aggregate_sets.png)
 
-Aggregation by sets gives a nice overview of the properties of the set, and selectively uncollapsing, as done for the “Action” genre here, enables analysts to inspect the composition of individual sets. 
+Aggregation by sets gives a nice overview of the properties of the set, and selectively un-collapsing, as done for the “Action” genre here, enables analysts to inspect the composition of individual sets. 
 
 ### Aggregate by Degree
 ![UpSet plot aggregated by degree.]({{path}}/aggregate_degree.png)
@@ -75,7 +75,7 @@ Aggregation by degree is an efficient method to inspect whether most items are p
 ### Nested Aggregation
 ![Nested aggregation showing by sets and pairwise overlap showing the relationship between a set and all other sets.]({{path}}/aggregate_nested.png)
 
-Nested aggregation is an advanced approach that is most useful to see pairwise overlaps between sets. In the above screenshot, the first level of aggregation is sets, the second is overlaps (all interesections that overlap between two sets). Combined, this results in a view that lets analysts efficiently analyze which sets interact with each other. 
+Nested aggregation is an advanced approach that is most useful to see pairwise overlaps between sets. In the above screenshot, the first level of aggregation is sets, the second is overlaps (all intersections that overlap between two sets). Combined, this results in a view that lets analysts efficiently analyze which sets interact with each other. 
 
 ## Queries
 
