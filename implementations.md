@@ -33,6 +33,9 @@ We distinguish between three-types of implementations:
 ### Web Libraries
 {% include version_list_entry.html key="upset.js" %}
 
+{% include version_list_entry.html key="upset-svelte" %}
+
+
 ### R Libraries
 {% include version_list_entry.html key="upsetr" %}
 
