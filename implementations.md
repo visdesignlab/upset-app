@@ -48,6 +48,11 @@ We distinguish between three-types of implementations:
 
 {% include version_list_entry.html key="upsetplot" %}
 
+{% include version_list_entry.html key="altair-upset" %}
+
+### Rust Library
+{% include version_list_entry.html key="upset-rust" %}
+
 ## Sample Implementations
 {% include version_list_entry.html key="upset-altair" %}
 

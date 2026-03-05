@@ -41,9 +41,9 @@ Bioinformatics, 33(18): 2938-2940, doi:10.1093/bioinformatics/btx364, 2017.
 
 **UpSet works best for set data with more than three and less than about 30 sets**. For fewer than 4 sets, an [area-proportional Venn diagram](https://doi.org/10.1371/journal.pone.0101717) might be the better choice, as they are immediately familiar to everyone. 
 
-**UpSet is well suited for analyzing distributions and properties of many items**. Items are abstracted away as “counts”, though attributes of the items can be visualized in integrated or adjacenct plots. If you want to see individual items in your set, you should probably go with a [Euler Diagram](https://de.wikipedia.org/wiki/Datei:British_Isles_Euler_diagram_15.svg).
+**UpSet is well suited for analyzing distributions and properties of many items**. Items are abstracted away as “counts”, though attributes of the items can be visualized in integrated or adjacent plots. If you want to see individual items in your set, you should probably go with a [Euler Diagram](https://de.wikipedia.org/wiki/Datei:British_Isles_Euler_diagram_15.svg).
 
-**UpSet shines when you want to look at all combinations of how sets intersect.**. If you want to look at pairwise intersections between sets, some sort of co-occurence matrix might be a better choice. 
+**UpSet shines when you want to look at all combinations of how sets intersect.**. If you want to look at pairwise intersections between sets, some sort of co-occurrence matrix might be a better choice. 
 
 Also take a look at the [Nature Methods Points of View article](https://www.nature.com/articles/nmeth.3033) discussing these trade-offs. 
  
@@ -58,7 +58,7 @@ Here you can see examples of how these intersections correspond to the segments 
 
 <img style="height: 400px; width: 490.5px" class="centered-image" src="{{path}}concept_2_intersections.svg" alt="Explaining the intersections in UpSet">
 
-This layout is great because we can plot the size of the intersections (the “cardinality”) as bar charts right next ot the matrix, as you can see in the following example: 
+This layout is great because we can plot the size of the intersections (the “cardinality”) as bar charts right next to the matrix, as you can see in the following example: 
 
 <img style="height: 400px; width: 531.8px" class="centered-image" src="{{path}}concept_3_cardinality.svg" alt="Plotting intersection sizes with bars in UpSet.">
 
@@ -73,7 +73,7 @@ Finally, UpSet works just as well horizontally or vertically. Vertical layouts a
 <img style="height: 250px; width: 340.3px" class="centered-image" src="{{path}}concept_5_horizontal.svg" alt="Horizontal layout in UpSet">
 
 
-These are the basiscs of UpSet! There's a lot more than you can do with UpSet plots, such as visualize attributes of the intersections, or group intersections. Look at the [advanced page](/advanced/) for details.
+These are the basics of UpSet! There's a lot more than you can do with UpSet plots, such as visualize attributes of the intersections, or group intersections. Look at the [advanced page](/advanced/) for details.
  
 
 ## Interpreting UpSet Plots
@@ -82,7 +82,7 @@ UpSet Plots are generally easy to read. There is one important caveat though: **
 
 ![UpSet and unequal set sizes.]({{path}}/unequal_set_size.png)
 
-Here' we're looking at movie genres, and it looks like the 2-set combination of “Drama” and “Comedy” is the largest two-set intersection. While this is a correct obervation it seems odd: dramas and comedy don't seem to go together all that well. What we're seeing here is an effect of the large size of the “Drama” and “Comedy” sets. Compared to the “Children“ and “Documentary” sets, those two sets are huge. To understand this, it's important to also look at the set sizes, and hence **no upset plot should omit the visualization of set sizes**. The above example shows another metric that can be used to interprete this: the “Deviation” (orange and blue bars) that indicate how much an intersection deviates from the expected size if we assumed that set membership were random. We see that the comedy-drama intersection is actually much smaller than it should be if the data were random.
+Here' we're looking at movie genres, and it looks like the 2-set combination of “Drama” and “Comedy” is the largest two-set intersection. While this is a correct observation it seems odd: dramas and comedy don't seem to go together all that well. What we're seeing here is an effect of the large size of the “Drama” and “Comedy” sets. Compared to the “Children“ and “Documentary” sets, those two sets are huge. To understand this, it's important to also look at the set sizes, and hence **no upset plot should omit the visualization of set sizes**. The above example shows another metric that can be used to interpret this: the “Deviation” (orange and blue bars) that indicate how much an intersection deviates from the expected size if we assumed that set membership were random. We see that the comedy-drama intersection is actually much smaller than it should be if the data were random.
 
 
 ## UpSet vs. Venn Diagrams
@@ -99,13 +99,13 @@ You might ask, how does the banana venn diagram look in UpSet? Here you go:
 
 It is a little hard to read because the figure is rather small. But we can simply remove the small intersections, and we get a nice plot that shows us the main features of the data:
 
-![UpSet showing the bana data with small intersections removed. ]({{path}}upsetr-banana_clipped.png)
+![UpSet showing the banana data with small intersections removed. ]({{path}}upsetr-banana_clipped.png)
 
 Notice how easy it is to see trends: the vast majority of genes is shared between all plants, as highlighted in the next figure:
 
 ![UpSet showing the banana data with highlight on largest intersection, which includes all sets.]({{path}}upset_genome_top.png)
 
-Similarily, the first three species (Oryza_sativa, Sorghum_bicolor, and Brachypodium_distachyon) seem to be highly related, as all of them are part of the top-three intersections. In contrast, the sixth species (Phoenix dactylifera) seems to be most different from the others, as it only again is part of the sixth-largest intersection.
+Similarly, the first three species (Oryza_sativa, Sorghum_bicolor, and Brachypodium_distachyon) seem to be highly related, as all of them are part of the top-three intersections. In contrast, the sixth species (Phoenix dactylifera) seems to be most different from the others, as it only again is part of the sixth-largest intersection.
 
 ![UpSet showing the banana data with highlight on the first three sets, and on the intersection of the date with the rest.]({{path}}upset_genome_top-3.png)
 
