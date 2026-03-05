@@ -1,9 +1,7 @@
-@use "sass:math";
-
 fieldset {
   background: lighten($base-border-color, 10);
   border: 1px solid $base-border-color;
-  margin: 0 0 math.div($base-line-height, 2) 0;
+  margin: 0 0 ($base-line-height / 2) 0;
   padding: $base-line-height;
 }
 
@@ -17,7 +15,7 @@ select {
 
 label {
   font-weight: bold;
-  margin-bottom: math.div($base-line-height, 4);
+  margin-bottom: $base-line-height / 4;
 
   &.required:after {
     content: "*";
@@ -39,8 +37,8 @@ select[multiple=multiple] {
   box-shadow: $form-box-shadow;
   font-family: $form-font-family;
   font-size: $form-font-size;
-  margin-bottom: math.div($base-line-height, 2);
-  padding: math.div($base-line-height, 3) math.div($base-line-height, 3);
+  margin-bottom: $base-line-height / 2;
+  padding: ($base-line-height / 3) ($base-line-height / 3);
   width: 100%;
 
   &:hover {
@@ -64,12 +62,12 @@ input[type="search"] {
 
 input[type="checkbox"], input[type="radio"] {
   display: inline;
-  margin-right: math.div($base-line-height, 4);
+  margin-right: $base-line-height / 4;
 }
 
 input[type="file"] {
-  margin-bottom: math.div($base-line-height, 2);
-  padding-bottom: math.div($base-line-height, 3);
+  margin-bottom: $base-line-height / 2;
+  padding-bottom: ($base-line-height / 3);
   width: 100%;
 }
 

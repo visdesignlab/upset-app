@@ -1,7 +1,5 @@
-@use "sass:math";
-
 @mixin grid-item-columns($columns) {
-  width: math.div(100%, 12) * $columns;
+  width: (100% / 12) * $columns;
 }
 
 .grid-items {
@@ -25,8 +23,8 @@
     padding: 2em;
     border-top: 0;
     border-bottom: $grid-item-border-size solid $grid-items-background;
-    border-left: math.div($grid-item-border-size, 2) solid $grid-items-background;
-    border-right: math.div($grid-item-border-size, 2) solid $grid-items-background;
+    border-left: $grid-item-border-size /2 solid $grid-items-background;
+    border-right: $grid-item-border-size /2 solid $grid-items-background;
     text-align: center;
     cursor: pointer;
 
