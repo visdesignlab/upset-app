@@ -1,9 +1,11 @@
+@use "sass:math";
+
 @mixin flash($color) {
   background: $color;
   color: darken($color, 60);
   font-weight: bold;
-  margin-bottom: $base-line-height / 2;
-  padding: $base-line-height / 2;
+  margin-bottom: math.div($base-line-height, 2);
+  padding: math.div($base-line-height, 2);
 
   a {
     color: darken($color, 70);

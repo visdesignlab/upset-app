@@ -1,3 +1,5 @@
+@use "sass:math";
+
 .cards {
   @include clearfix;
 }
@@ -71,7 +73,7 @@
     background-color: $card-header-background;
     border-bottom: $card-border;
     border-radius: $base-border-radius $base-border-radius 0 0;
-    padding: $base-line-height/3 $gutter/2;
+    padding: math.div($base-line-height, 3) math.div($gutter, 2);
 
     a {
       display: block;
@@ -98,13 +100,13 @@
   }
 
   .card-copy {
-    padding: $base-line-height/2 $gutter/2;
+    padding: math.div($base-line-height, 2) math.div($gutter, 2);
     font-size: .9em;
     line-height: 1.5em;
   }
 
   .card-stats {
-    padding: $base-line-height/2 $gutter/2;
+    padding: math.div($base-line-height, 2) math.div($gutter, 2);
     overflow: auto;
 
     ul li {

@@ -1,6 +1,8 @@
+@use "sass:math";
+
 table {
   border-collapse: collapse;
-  margin: ($base-line-height / 2) 0;
+  margin: math.div($base-line-height, 2) 0;
   table-layout: fixed;
   width: 100%;
 }
@@ -8,13 +10,13 @@ table {
 th {
   border-bottom: 1px solid darken($base-border-color, 15%);
   font-weight: bold;
-  padding: ($base-line-height / 2) 0;
+  padding: math.div($base-line-height, 2) 0;
   text-align: left;
 }
 
 td {
   border-bottom: 1px solid $base-border-color;
-  padding: ($base-line-height / 2) 0;
+  padding: math.div($base-line-height, 2) 0;
 }
 
 tr, td, th {
